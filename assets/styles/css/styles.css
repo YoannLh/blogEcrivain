@@ -1,7 +1,7 @@
 /* stylelint-disable selector-list-comma-newline-after */
 
 .cold-blue {
-  color : rgb(70,203,251);
+  color : rgb(125,175,251);
 }
 
 .blog-header {
@@ -11,7 +11,7 @@
 
 .blog-header-logo {
   font-family: "Playfair Display", Georgia, "Times New Roman", serif;
-  font-size: 2.25rem;
+  font-size: 3rem;
 }
 
 .blog-header-logo:hover {
@@ -118,6 +118,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .flex {
     display: flex;
+}
+
+#bodyIdentification {
+    /*background: url('../../../assets/images/montagne_alaska.jpg') no-repeat center;
+    background-size: cover;*/
 }
 
 

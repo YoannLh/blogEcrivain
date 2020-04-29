@@ -2,16 +2,29 @@
 <html lang="fr">
 	<head>
 
-	    <?php include_once 'views/includes/head.php'?>
+	    <?php include_once 'includes/head.php'; ?>
 
 	    <title><?= ucfirst($page) ?></title>
+	    
 	</head>
 
 	<body>
 
-	    <?php include_once 'views/includes/header.php'?>
-
 	    <!-- CONTENU -->
+
+	    <?php 
+
+	    	if(isset($_SESSION['connect']) && isset($_SESSION['pseudo'])) {
+
+	    		include_once 'views/includes/headerIfLogged.php';
+
+			} else {
+
+				include_once 'views/includes/header.php';
+
+			}
+
+	    ?>
 
 	    <div class="nav-scroller py-1 mb-2">
 		    <nav class="nav d-flex justify-content-between">

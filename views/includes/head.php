@@ -17,7 +17,7 @@
 <meta property="og:description"       content="<?= WEBSITE_FACEBOOK_DESCRIPTION?>" />
 <meta property="og:image"             content="<?= WEBSITE_FACEBOOK_IMAGE?>" />
  
-<title>Jean Richenoire</title>
+<title>Jean Forteroche</title>
 
 <!-- Bootstrap core CSS -->
 

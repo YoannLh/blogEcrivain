@@ -4,6 +4,9 @@
 include_once '_config/config.php';
 include_once '_functions/functions.php';
 
+// ATTENTION, PENSER A LE VIRER !
+//$_SESSION = array();
+
 // Définition de la page courante
 if (isset($_GET['page']) AND !empty($_GET['page'])) {
     $page = trim(strtolower($_GET['page']));
