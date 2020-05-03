@@ -10,11 +10,11 @@
 		exit();
 	}
 
-	if (!empty($_POST['newPost']) && isset($_POST['submit'])) {
+	if (!empty($_POST['comment']) && isset($_POST['submit'])) {
 
-		$post = new Post;
+		$comment = new Comment;
 
-		$post->postNewPost(str_secur($_POST['newPost']));
+		$post->postNewComment(str_secur($_POST['comment']));
 
 	}
 

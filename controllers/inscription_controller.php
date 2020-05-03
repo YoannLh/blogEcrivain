@@ -1,5 +1,7 @@
 <?php
 
+	include_once 'views/Inscription_model.php';
+
 	if (isset($_SESSION['connect']) && isset($_SESSION['pseudo'])) {
 
 		header('location: home');
@@ -20,38 +22,32 @@
 
 		}
 
-		$req = $db->prepare('SELECT count(*) as numberEmail FROM users WHERE email = ?');
-
-		$req->execute(array($mail));
-
-		while($mail_verification = $req->fetch()) {
-
-			if($mail_verification['numberEmail'] != 0) {
-
-				echo "Adresse mail déjà utilisée.";
-
-			}
-		}
-
 		if ($password != $password_two) {
 
 			echo "Vos mots de passe ne sont pas identiques !";
 
-
-		} 
-
-		if(filter_var($mail, FILTER_VALIDATE_EMAIL) && $password == $password_two) {
-
-			$passwordCrypted = password_hash($password, PASSWORD_DEFAULT);
-			$secret = rand().rand();
-
-			$req = $db->prepare('INSERT INTO users(mail, pseudo, password, secret) VALUES (?, ?, ?, ?)');
-
-			$req->execute(array($mail, $pseudo, $passwordCrypted, $secret));
-
-			header('location: ?page=identification');
-			exit();
 		}
+
+		$inscription = new Inscription;
+
+		if($inscription->checkIfMailExists($mail)['numberEmail'] != 0) {
+
+			echo "Adresse mail déjà utilisée.";
+
+		} else { 
+		
+			if(filter_var($mail, FILTER_VALIDATE_EMAIL) && $password == $password_two) {
+
+				$passwordCrypted = password_hash($password, PASSWORD_DEFAULT);
+				$secret = rand().rand();
+				$rank = "visitor";
+
+				$inscription->sendAllInformations($mail, $pseudo, $passwordCrypted, $secret, $rank);
+
+				header('location: ?page=identification');
+				exit();
+			} 
+		}	
 	}
 
 ?>

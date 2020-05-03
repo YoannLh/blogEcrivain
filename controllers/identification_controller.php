@@ -25,7 +25,7 @@
 
 			if($user_identification['askingEmailExists'] == $mail) {
 
-				$req = $db->prepare('SELECT password, pseudo FROM users WHERE mail = ?');
+				$req = $db->prepare('SELECT password, pseudo, rank FROM users WHERE mail = ?');
 				$req->execute(array($mail));
 
 				while($compare_password = $req->fetch()) {
@@ -34,6 +34,7 @@
 
 						$_SESSION['connect'] = 1;
 						$_SESSION['pseudo'] = ucfirst($compare_password['pseudo']);
+						$_SESSION['rank'] = $compare_password['rank'];
 
 						header('location: home');
 						exit();

@@ -5,7 +5,7 @@
 	    <?php include_once 'includes/head.php'; ?>
 
 	    <title><?= ucfirst($page) ?></title>
-	    
+
 	</head>
 
 	<body>
@@ -14,7 +14,11 @@
 
 	    <?php 
 
-	    	if(isset($_SESSION['connect']) && isset($_SESSION['pseudo'])) {
+	    	if($_SESSION['rank'] == "admin") {
+
+	    		include_once 'views/includes/headerIfAdmin.php';
+
+	    	} else if(isset($_SESSION['connect']) && isset($_SESSION['pseudo'])) {
 
 	    		include_once 'views/includes/headerIfLogged.php';
 
