@@ -24,6 +24,24 @@
 
 		}
 
+		public function showAllPosts() {
+
+			$db = $this->dbConnect();
+
+			$reqShow = $db->query('SELECT * post FROM posts');
+
+			return $reqShow;
+
+		}
+
+		public function showLastPost() {
+
+			$db = $this->dbConnect();
+
+			$reqShowLastPost = $db->query('SELECT * post FROM posts');
+
+			return $reqShowLastPost;
+		}
 	}
 
 ?>

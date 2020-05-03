@@ -18,4 +18,10 @@
 
 	}
 
+	$post = new Post;
+
+	$_POST['lastPost'] = $post->showLastPost();
+
+	$_POST['allPosts'] = $post->showAllPosts();
+
 ?>
