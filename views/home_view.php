@@ -42,9 +42,9 @@
 
 		  <div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
 		    <div class="col-md-6 px-0">
-		      <h1 class="display-4 font-italic">Title of a longer featured blog post</h1>
-		      <p class="lead my-3">Multiple lines of text that form the lede, informing new readers quickly and efficiently about what’s most interesting in this post’s contents.</p>
-		      <p class="lead mb-0"><a href="#" class="text-white font-weight-bold">Continue reading...</a></p>
+		      <h1 class="display-4 font-italic">Plongez dans une épopée glaçiale...</h1>
+		      <p class="lead my-3">Either est une archéologue envoyée en Alaska pour ce qui ne devait être qu'une simple fouille. Mais bien des secrets sommeillent profondemment dans la glace...</p>
+		      <p class="lead mb-0"><a href="#" class="text-white font-weight-bold">Commencez : Le froid qui mord</a></p>
 		    </div>
 		  </div>
 
@@ -53,7 +53,7 @@
 		    <div class="col-md-6">
 		      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
 		        <div class="col p-4 d-flex flex-column position-static">
-		          <strong class="d-inline-block mb-2 text-primary">World</strong>
+		          <strong class="d-inline-block mb-2 text-primary">Du même auteur</strong>
 		          <h3 class="mb-0">Featured post</h3>
 		          <div class="mb-1 text-muted">Nov 12</div>
 		          <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
@@ -67,7 +67,7 @@
 		    <div class="col-md-6">
 		      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
 		        <div class="col p-4 d-flex flex-column position-static">
-		          <strong class="d-inline-block mb-2 text-success">Design</strong>
+		          <strong class="d-inline-block mb-2 text-success">Du même auteur</strong>
 		          <h3 class="mb-0">Post title</h3>
 		          <div class="mb-1 text-muted">Nov 11</div>
 		          <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
@@ -85,30 +85,10 @@
 		  <div class="row">
 		    <div class="col-md-8 blog-main">
 		      <h3 class="pb-4 mb-4 font-italic border-bottom">
-		        From the Firehose
+		        Les derniers posts
 		      </h3>
 
-		      <div class="blog-post">
-		        <h2 class="blog-post-title">Titre</h2>
-		        <p class="blog-post-meta">January 1, 2014 by <a href="#">Mark</a></p>
-
-		        <p>Dernier post</p>
-
-		      </div><!-- /.blog-post -->
-
-		      <div class="blog-post">
-		        <h2 class="blog-post-title">Titre 2</h2>
-		        <p class="blog-post-meta">December 23, 2013 by <a href="#">Jacob</a></p>
-
-		        <p>2eme post</p>
-		      </div><!-- /.blog-post -->
-
-		      <div class="blog-post">
-		        <h2 class="blog-post-title">Titre 3</h2>
-		        <p class="blog-post-meta">December 14, 2013 by <a href="#">Chris</a></p>
-
-		        <p>3eme post</p>
-		      </div><!-- /.blog-post -->
+		      <?= showThreeLastPosts() ?>
 
 		      <nav class="blog-pagination">
 		        <a class="btn btn-outline-primary" href="#">Older</a>
@@ -119,27 +99,11 @@
 
 		    <aside class="col-md-4 blog-sidebar">
 		      <div class="p-4 mb-3 bg-light rounded">
-		        <h4 class="font-italic">About</h4>
-		        <p class="mb-0">Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+		        <h4 class="font-italic">A propos de l'auteur</h4>
+		        <p class="mb-0">Jean Forteroche est l'auteur du très controversé "Du Rififi Chez Les Fifous". On ne sort jamais vraiment indemme de ses romans souvent très noirs, mais toujours humoristiques...</p>
 		      </div>
 
-		      <div class="p-4">
-		        <h4 class="font-italic">Archives</h4>
-		        <ol class="list-unstyled mb-0">
-		          <li><a href="#">March 2014</a></li>
-		          <li><a href="#">February 2014</a></li>
-		          <li><a href="#">January 2014</a></li>
-		          <li><a href="#">December 2013</a></li>
-		          <li><a href="#">November 2013</a></li>
-		          <li><a href="#">October 2013</a></li>
-		          <li><a href="#">September 2013</a></li>
-		          <li><a href="#">August 2013</a></li>
-		          <li><a href="#">July 2013</a></li>
-		          <li><a href="#">June 2013</a></li>
-		          <li><a href="#">May 2013</a></li>
-		          <li><a href="#">April 2013</a></li>
-		        </ol>
-		      </div>
+		      <?= showAllLastPosts(); ?>
 
 		      <div class="p-4">
 		        <h4 class="font-italic">Elsewhere</h4>
