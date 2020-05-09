@@ -25,9 +25,9 @@ if (in_array($page.'_controller.php', $allPages)) {
     include_once '_config/db.php';
 
     // Inclusion de la page
-    include_once 'models/'.$page.'_model.php';
-    include_once 'controllers/'.$page.'_controller.php';
-    include_once 'views/'.$page.'_view.php';
+    include_once 'models/' . $page . '_model.php';
+    include_once 'controllers/' . $page . '_controller.php';
+    include_once 'views/' . $page . '_view.php';
 
 } else {
 

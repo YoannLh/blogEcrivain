@@ -14,7 +14,7 @@
 
         <form method="post">
             <textarea name="newPost">
-                Bienvenue :)
+                
             </textarea>
               <script>
                 tinymce.init({

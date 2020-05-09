@@ -4,6 +4,33 @@
   color : rgb(100,175,251);
 }
 
+a {
+  text-decoration: none;
+  color: rgb(100,175,251);
+}
+
+a:hover {
+  text-decoration: none;
+  color: rgb(100,175,251);
+}
+
+.blog-post {
+  border-radius: 3px;
+  padding: 10px;
+}
+
+.blog-post:hover {
+  background: rgba(85, 85, 85, 0.05);
+}
+
+.colorPost {
+  color: black;
+}
+
+.center {
+  text-align: center;
+}
+
 .blog-header {
   line-height: 1;
   border-bottom: 1px solid #e5e5e5;

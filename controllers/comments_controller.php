@@ -1,6 +1,6 @@
 <?php
 
-	include_once 'views/tiny_model.php';
+	include_once 'views/comments_model.php';
 
 	if(isset($_POST['deconnexion'])) {
 

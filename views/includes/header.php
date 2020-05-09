@@ -5,7 +5,7 @@
         <a class="text-muted" href="?page=inscription">S'inscrire</a>
       </div>
       <div class="col-4 text-center">
-        <h1 class="blog-header-logo cold-blue">Billet Simple Pour L'Alaska</h1> 
+        <h1 class="blog-header-logo cold-blue">Billet Simple Pour l'Alaska</h1> 
       </div>
       <div class="col-4 d-flex justify-content-end align-items-center">
         <a class="text-muted" href="#" aria-label="Search">

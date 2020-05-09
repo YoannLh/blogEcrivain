@@ -10,7 +10,6 @@
 			$reqComment->execute($comment);
 
 		}
-
 	}
 
 ?>
