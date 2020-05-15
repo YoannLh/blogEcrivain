@@ -13,9 +13,8 @@
         </header>
 
         <form method="post">
-            <textarea name="newPost">
-                
-            </textarea>
+            <textarea placeholder="Titre..." name="title"></textarea>
+            <textarea placeholder="Texte..." name="newPost"></textarea>
               <script>
                 tinymce.init({
                     selector: 'textarea'});

@@ -14,13 +14,13 @@
 
 		}
 
-		public function postNewPost($post) {
+		public function postNewPost($title, $post) {
 
 			$db = $this->dbConnect();
 
-			$reqPost = $db->prepare('INSERT INTO posts (post) VALUES (?)');
+			$reqPost = $db->prepare('INSERT INTO posts (title, post) VALUES (?,?)');
 			
-			$reqPost->execute(array($post));
+			$reqPost->execute(array($title, $post));
 
 		}
 

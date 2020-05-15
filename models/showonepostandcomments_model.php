@@ -15,23 +15,24 @@
 
 		}
 
-		public function postNewComment($comment) {
+		public function postNewComment($comment, $author) {
 
 			$db = $this->dbConnect();
 
-			$reqComment = $db->prepare('INSERT INTO comments (comment) VALUES (?)');
-			$reqComment->execute($comment);
+			$reqComment = $db->prepare('INSERT INTO comments(comment, author) VALUES (?, ?)');
+			$reqComment->execute(array($comment, $author));
 
 		}
 
-		public function showPosts($id) {
+		public function getAndShowAllCommentsByPost() {
 
 			$db = $this->dbConnect();
 
-			$actualPost = $db->prepare('SELECT comment FROM comments WHERE id = ?');
-			$actualPost->execute(array($id));
+			$allComments = $db->prepare('SELECT comment, author, datecomment FROM comments ORDER BY id DESC');
+			$allComments->execute(array());
 
-			return $actualPost->fetch();
+			return $allComments->fetchAll();
+
 		}
 	}
 
