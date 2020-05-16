@@ -34,12 +34,19 @@
 		exit();
 	}
 
+	if(isset($_POST['moderate'])) {
+
+		header('location: comment_manager');
+		exit();
+	}
+
 	if(isset($_GET['id']) && !empty($_GET['id'])) {
 
 		$id = str_secur($_GET['id']);
 
 	}
 
+	// RECUPERE ET AFFICHE LES POSTS
 	function showTitleAndPost() {
 
 		global $id;
@@ -56,13 +63,16 @@
 
 	}
 
+	// RECUPERE ET AFFICHE LES COMMENTAIRES PAR POSTS
 	function showAllCommentsByPost() {
+
+		global $id;
 
 		global $buttonReportOrDelete;
 
 		$getComments = new ShowOnePostAndComments;
 
-		foreach($getComments->getAndShowAllCommentsByPost() as $allComments) {
+		foreach($getComments->getAndShowAllCommentsByPost($id) as $allComments) {
 
 			$comment = $allComments['comment'];
 			$author = $allComments['author'];
@@ -70,20 +80,25 @@
 
 			echo '<ol class="list-unstyled mb-0">
 
-					<li class="comment">' . '<p><span class="authorComment">' . $author . '</span>' . " a posté le " . $date . '</p><p>' . '"' . $comment . '"' . '</p>' . $buttonReportOrDelete . '</li>
+					<li class="comment">' . '<p><span class="authorComment">' . $author . '</span>' . " a posté le " . $date . '</p><p>' . '"' . $comment . '"' . '</p><form method="post">' . $buttonReportOrDelete . '</form></li>
 
 				</ol>';
 
 		}
 	}
 
+	// ENVOIE LES COMMENTAIRES A LA BDD
 	function getComments() {
 
-		if (!empty($_POST['comment']) && isset($_POST['comment']) && isset($_SESSION['pseudo'])) {
+		global $id;
+
+		if (isset($_POST['comment']) && !empty($_POST['comment']) && isset($_SESSION['pseudo'])) {
 
 			$comments = new ShowOnePostAndComments;
 
-			$comments->postNewComment(str_secur($_POST['comment']), $_SESSION['pseudo']);
+			$comments->postNewComment($id, str_secur($_POST['comment']), $_SESSION['pseudo']);
+
+			header('location: home?page=showonepostandcomments&id=11');
   	
 		} else if (!empty($_POST['comment']) && isset($_POST['comment']) && !isset($_SESSION['pseudo'])) {
 

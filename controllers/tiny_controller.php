@@ -16,6 +16,12 @@
 		exit();
 	}
 
+	if(isset($_POST['moderate'])) {
+
+		header('location: comment_manager');
+		exit();
+	}
+
 	if (!empty($_POST['newPost'])  && !empty($_POST['title']) && isset($_POST['submit'])) {
 
 		$post = new Post;

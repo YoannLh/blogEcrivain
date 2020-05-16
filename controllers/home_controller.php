@@ -36,6 +36,12 @@
 		exit();
 	}
 
+	if(isset($_POST['moderate'])) {
+
+		header('location: comment_manager');
+		exit();
+	}
+
 	function showThreeLastPosts() { 
 
 		$showPost = new ShowPost;
