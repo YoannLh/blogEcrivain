@@ -6,14 +6,18 @@
 
 		public function reportComment() {
 
+			//$_POST['reportComment']
 		}
 
 		public function showReportedComments() {
+
+
 
 		}
 
 		public function deleteComment() {
 
+			//$_POST['deleteComment']
 		}
 	}
 

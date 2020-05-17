@@ -26,6 +26,15 @@
 		exit();
 	}
 
+	function showAllReportedComment() { 
+
+		if(isset($_POST['reportComment']) && isset($_SESSION['pseudo']) && $_SESSION['rank'] == "visitor") {
+
+			$commentManager = new CommentManager;
+
+		}
+		
+	}
 
 
 

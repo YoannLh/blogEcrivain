@@ -2,13 +2,13 @@
 
 	if($_SESSION['rank'] == "admin") {
 
-		$buttonReportOrDelete = '<button class="btn btn-link" id="buttonReportOrDelete" name="deleteComment">
+		$buttonReportOrDelete = '<button type="submit" class="btn btn-link" id="buttonReportOrDelete" 									name="deleteComment">
 									Supprimer
 								</button>';
 
 	} else {
 
-		$buttonReportOrDelete = '<button class="btn btn-link" id="buttonReportOrDelete" name="reportComment">
+		$buttonReportOrDelete = '<button type="submit" class="btn btn-link" id="buttonReportOrDelete" 									name="reportComment">
 									Signaler	
 								</button>';
 
@@ -74,13 +74,30 @@
 
 		foreach($getComments->getAndShowAllCommentsByPost($id) as $allComments) {
 
+			$id_comment = $allComments['id'];
 			$comment = $allComments['comment'];
 			$author = $allComments['author'];
 			$date = $allComments['datecomment'];
 
 			echo '<ol class="list-unstyled mb-0">
 
-					<li class="comment">' . '<p><span class="authorComment">' . $author . '</span>' . " a posté le " . $date . '</p><p>' . '"' . $comment . '"' . '</p><form method="post">' . $buttonReportOrDelete . '</form></li>
+					<li class="comment">' . 
+						'<p>
+							<span class="authorComment">' . 
+								$author . 
+							'</span>' . 
+							" a posté le " . $date . 
+						'</p>		
+						<p>' . 
+							'"' . $comment . '"' . 
+						'</p>
+						<form method="post">' . 
+							$buttonReportOrDelete . 
+							'<textarea name="id_reported_comment" style="display: none">' .
+								$id_comment .
+							'</textarea>
+						</form>
+					</li>
 
 				</ol>';
 
@@ -117,6 +134,34 @@
 						</div>
 					</div>
 				</form>';
+	}
+
+	function getReportedComment() {
+
+		if(isset($_POST['id_reported_comment']) && isset($_SESSION['pseudo']) && $_SESSION['rank'] == "visitor") {
+
+			$id_reported_comment = $_POST['id_reported_comment'];
+
+			echo $id_reported_comment;
+
+			$comments = new ShowOnePostAndComments;
+
+			$comments->sendReportComment($id_reported_comment);
+
+		}
+	}
+
+	function deleteComment() {
+
+		if(isset($_POST['id_reported_comment']) && isset($_SESSION['pseudo']) && $_SESSION['rank'] == "admin") {
+
+			$id_deleted_comment = $_POST['id_reported_comment'];
+
+			$comments = new ShowOnePostAndComments;
+
+			$comments->deleteComment($id_deleted_comment);
+
+		}
 	}
 
 ?>

@@ -25,6 +25,10 @@
 
 		?>
 
+		<?= getReportedComment() ?>
+
+		<?= deleteComment() ?>
+
 		<?= showTitleAndPost() ?>
 
 		<?= getComments() ?>
