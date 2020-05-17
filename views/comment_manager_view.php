@@ -25,8 +25,9 @@
 
 		?>
 
+		<?= deleteComment() ?>
 
-
+		<?= showAllReportedComment() ?>
 
 		<?php include_once 'views/includes/footer.php'; ?>
 

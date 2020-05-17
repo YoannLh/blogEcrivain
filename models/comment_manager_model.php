@@ -9,15 +9,26 @@
 			//$_POST['reportComment']
 		}
 
-		public function showReportedComments() {
+		public function getAllReportedComments($reported) {
 
+			$db = $this->dbConnect();
 
+			$actualPost = $db->prepare('SELECT id, comment, author, datecomment
+										FROM comments
+										WHERE reported = ?
+										ORDER BY id DESC');
+			$actualPost->execute(array($reported));
+
+			return $actualPost->fetchAll();
 
 		}
 
-		public function deleteComment() {
+		public function deleteComment($id_deleted_comment) {
 
-			//$_POST['deleteComment']
+			$db = $this->dbConnect();
+
+			$reqComment = $db->prepare('DELETE FROM comments WHERE id = ?');
+			$reqComment->execute(array($id_deleted_comment));
 		}
 	}
 
