@@ -15,10 +15,44 @@
                   name="deconnexion">
                 Déconnexion
           </button>
-          <div style="margin-top: 62px">
-            <button class="btn btn-sm btn-outline-secondary" type="submit" name="return">Retour</button>
-            <button class="btn btn-sm btn-outline-secondary" type="submit" name="writeNew">Ecrire un billet</button>
-            <button class="btn btn-sm btn-outline-secondary" type="submit" name="moderate">Commentaires signalés</button>
+          <div style="margin-top: 65px">
+            <button class="btn btn-sm btn-outline-secondary" type="submit" name="return">Acceuil</button>
+            <button class="btn btn-sm btn-outline-secondary" type="submit" name="writeNew">Ecrire un post</button>
+
+            <button class="btn btn-sm btn-outline-secondary" type="submit" name="moderate" style="position: relative">
+              Commentaires signalés
+
+              <?php 
+
+                function getAllReportedComments() {
+
+                  $db = new PDO('mysql:host='.DATABASE_HOST.';dbname='.DATABASE_NAME.';charset=utf8', DATABASE_USER, DATABASE_PASSWORD);
+
+                  $reportedComments = $db->prepare('SELECT count(*) as number FROM comments WHERE reported = 1');
+                  $reportedComments->execute(array());
+
+                  while($nb_of_reported_comments = $reportedComments->fetch()) {
+
+                    if($nb_of_reported_comments['number'] > 0) { 
+
+                      $_SESSION['alert'] = '<div class="alertReportedComments">' . $nb_of_reported_comments['number'] . '</div>';
+
+                      echo $_SESSION['alert'];
+
+                    } else {
+
+                      echo "";
+                    }
+
+                  }
+                }
+
+                getAllReportedComments();
+
+              ?>
+           
+          </button>
+            
         </div>
         </form>
       </div>

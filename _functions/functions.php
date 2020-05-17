@@ -18,3 +18,4 @@ function debug($var) {
     var_dump($var);
     echo '</pre>';
 }
+

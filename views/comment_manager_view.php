@@ -13,6 +13,8 @@
 
 		    		include_once 'views/includes/headerIfAdmin.php';
 
+		    		unset($_SESSION['alert']);
+
 		    	} else if(isset($_SESSION['connect']) && isset($_SESSION['pseudo'])) {
 
 		    		include_once 'views/includes/headerIfLogged.php';

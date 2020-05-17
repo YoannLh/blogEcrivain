@@ -30,13 +30,19 @@
 							Supprimer
 							</button>';
 
+	$nb_reported_comments = 1;
+
 	function showAllReportedComment() { 
 
 		global $buttonReportOrDelete;
 
+		global $nb_reported_comments;
+
 		$commentManager = new CommentManager;
 
 		foreach($commentManager->getAllReportedComments(1) as $allReportedComments) {
+
+			$nb_reported_comments++;
 
 			$id_comment = $allReportedComments['id'];
 			$comment = $allReportedComments['comment'];
@@ -66,6 +72,15 @@
 				</ol>';
 
 		}
+	}
+
+	function showReportedCommentsInAlert() {
+
+		global $nb_reported_comments;
+
+		echo $nb_reported_comments;
+
+		return $_SESSION['$nb_reported_comments'] = $nb_reported_comments;
 	}
 
 	function deleteComment() {

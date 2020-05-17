@@ -15,5 +15,6 @@
 
 			return $reqAllPost->fetchAll();
 		}
-
 	}
+
+?>

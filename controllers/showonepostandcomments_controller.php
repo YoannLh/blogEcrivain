@@ -142,8 +142,6 @@
 
 			$id_reported_comment = $_POST['id_reported_comment'];
 
-			echo $id_reported_comment;
-
 			$comments = new ShowOnePostAndComments;
 
 			$comments->sendReportComment($id_reported_comment);
