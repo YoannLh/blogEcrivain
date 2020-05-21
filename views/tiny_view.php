@@ -13,7 +13,7 @@
         </header>
 
         <form method="post">
-            <textarea placeholder="Titre..." name="title"></textarea>
+            <textarea placeholder="Titre du chapitre..." name="title"></textarea>
             <textarea placeholder="Texte..." name="newPost"></textarea>
               <script>
                 tinymce.init({

@@ -5,7 +5,7 @@
 		<?php include_once 'views/includes/head.php'; ?>
 
 	</head>
-	<body>
+	<body id="body">
 
 		<?php
 
@@ -30,6 +30,8 @@
 		<?= deleteComment() ?>
 
 		<?= showTitleAndPost() ?>
+
+		<?= previousOrNextPost() ?>
 
 		<?= getComments() ?>
 

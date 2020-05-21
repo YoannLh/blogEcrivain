@@ -26,13 +26,18 @@
 		exit();
 	}
 
+	$buttonNoDelete = '<input type="submit" class="btn btn-link" id="buttonNoDelete" 														name="noDeleteComment" value="Ne pas supprimer du fil"
+						/>';
+
 	$buttonReportOrDelete = '<button type="submit" class="btn btn-link" id="buttonReportOrDelete" 											name="deleteComment">
-							Supprimer
+								Supprimer
 							</button>';
 
-	$nb_reported_comments = 1;
+	$nb_reported_comments = 0;
 
 	function showAllReportedComment() { 
+
+		global $buttonNoDelete;
 
 		global $buttonReportOrDelete;
 
@@ -62,6 +67,7 @@
 							'"' . $comment . '"' . 
 						'</p>
 						<form method="post">' . 
+							$buttonNoDelete . 
 							$buttonReportOrDelete . 
 							'<textarea name="id_reported_comment" style="display: none">' .
 								$id_comment .
@@ -81,6 +87,19 @@
 		echo $nb_reported_comments;
 
 		return $_SESSION['$nb_reported_comments'] = $nb_reported_comments;
+	}
+
+	function noDeleteComment() {
+
+		if(isset($_POST['noDeleteComment']) && isset($_SESSION['pseudo']) && $_SESSION['rank'] == "admin") {
+
+			$id_no_delete_comment = $_POST['id_reported_comment'];
+
+			$commentManager = new CommentManager;
+
+			$commentManager->noDeleteComment($id_no_delete_comment);
+
+		}
 	}
 
 	function deleteComment() {

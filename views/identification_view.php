@@ -13,6 +13,12 @@
 				</table>
 				<button type="submit">S'identifier</button>
 				<a href="home">Retour au site</a>
+				<input 
+					class="btn btn-link forgotten_password" 
+					type="submit" 
+					name="forgotten_password" 
+					value="mot de passe oublié ?"
+				/>
 			</form>
 		</div>
 	</body>

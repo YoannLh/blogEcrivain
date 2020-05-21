@@ -22,11 +22,13 @@
 		    </nav>
  		 </div>
 
-		  <div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
+		  <div class="firstPicture jumbotron p-4 p-md-5 text-white rounded bg-dark">
 		    <div class="col-md-6 px-0">
-		      <h1 class="display-4 font-italic">Plongez dans une épopée glaçiale...</h1>
-		      <p class="lead my-3">Either est une archéologue envoyée en Alaska pour ce qui ne devait être qu'une simple fouille. Mais bien des secrets sommeillent profondemment dans la glace...</p>
-		      <p class="lead mb-0"><a href="#" class="text-white font-weight-bold">Commencez : Le froid qui mord</a></p>
+		      <h1 style="text-shadow: 1px 1px 2px black" class="display-4 font-italic">Plongez dans une épopée glaçiale...</h1>
+		      <p style="text-shadow: 1px 1px 2px black" class="lead my-3">Either est une archéologue envoyée en Alaska pour ce qui ne devait être qu'une simple fouille. Mais bien des secrets sommeillent profondemment dans la glace...</p>
+		      <p style="text-shadow: 1px 1px 2px black" class="lead mb-0">
+		      	<a href="home?page=showonepostandcomments&id=12" class="text-white font-weight-bold">Commencez : Chapitre Un</a>
+		      </p>
 		    </div>
 		  </div>
 

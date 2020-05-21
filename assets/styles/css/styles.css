@@ -1,5 +1,15 @@
 /* stylelint-disable selector-list-comma-newline-after */
 
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.firstPicture {
+  background: url('../../../assets/images/mountains.jpg') no-repeat center;
+  opacity: 0.9;
+}
+
 .blog-header {
   line-height: 1;
   border-bottom: 1px solid #e5e5e5;
@@ -81,7 +91,10 @@ h1, h2, h3, h4, h5, h6 {
  */
 .blog-post {
   margin-bottom: 4rem;
-  max-height: 300px;
+  max-height: 287px;
+  border-radius: 3px;
+  padding: 10px;
+  overflow: hidden;
 }
 .blog-post-title {
   margin-bottom: .25rem;
@@ -90,6 +103,13 @@ h1, h2, h3, h4, h5, h6 {
 .blog-post-meta {
   margin-bottom: 1.25rem;
   color: #999;
+}
+.blog-post:hover {
+  background: rgba(85, 85, 85, 0.05);
+}
+
+.colorPost {
+  color: black;
 }
 
 /*
@@ -106,11 +126,33 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0;
 }
 
+.readingPost {
+  width: 55%;
+  margin: 20px auto; 
+  text-align: justify;
+  text-justify: inter-word;
+  text-indent: 25px;
+}
+
+.previousAndNext {
+  width: 80%;
+  margin: auto;
+  margin-top: 40px;
+  justify-content: space-between;
+}
+
 .formInscriptionEtIdentification {
-   border: 1px solid mediumturquoise;
-   border-radius: 5px;
-    padding: 5%;
-    margin: 7% auto;
+  position: relative;
+  border: 1px solid mediumturquoise;
+  border-radius: 5px;
+  padding: 5%;
+  margin: 7% auto;
+}
+
+.forgotten_password {
+  position: absolute;
+  bottom: -6px;
+  right: -6px;
 }
 
 .flex {
@@ -136,30 +178,17 @@ a:hover {
   color: rgb(100,175,251);
 }
 
-.blog-post {
-  border-radius: 3px;
-  padding: 10px;
-}
-
-.blog-post:hover {
-  background: rgba(85, 85, 85, 0.05);
-}
-
-.colorPost {
-  color: black;
-}
-
 .comment {
   position: relative;
   background: rgba(85, 85, 85, 0.07);
   padding: 10px;
   margin: 10px;
-  
   border-radius: 3px;
 }
 
 #commentForm {
   margin: 10px;
+  margin-top: 40px;
   line-height: 1;
   border-bottom: 1px solid #e5e5e5;
 }
@@ -170,6 +199,12 @@ a:hover {
   right: 1px;
 }
 
+#buttonNoDelete {
+  position: absolute;
+  bottom: 1px;
+  right: 125px;
+}
+
 .authorComment {
   font-weight: bold;
   font-size: 1.1em;
@@ -177,6 +212,7 @@ a:hover {
 
 .center {
   text-align: center;
+  align-items: center;
 }
 
 .alertReportedComments {

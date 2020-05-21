@@ -5,12 +5,9 @@
         <a class="text-muted" href="?page=inscription">S'inscrire</a>
       </div>
       <div class="col-4 text-center">
-        <h1 class="blog-header-logo cold-blue">Billet Simple Pour l'Alaska</h1> 
+        <h1 class="blog-header-logo cold-blue"><a href="home">Billet Simple Pour l'Alaska</a></h1> 
       </div>
       <div class="col-4 d-flex justify-content-end align-items-center">
-        <a class="text-muted" href="#" aria-label="Search">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="mx-3" role="img" viewBox="0 0 24 24" focusable="false"><title>Search</title><circle cx="10.5" cy="10.5" r="7.5"/><path d="M21 21l-5.2-5.2"/></svg>
-        </a>
         <a class="btn btn-sm btn-outline-secondary" href="?page=identification">S'identifier</a>
       </div>
     </div>

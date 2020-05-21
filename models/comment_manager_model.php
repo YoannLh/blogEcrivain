@@ -4,11 +4,6 @@
 
 	class CommentManager extends Connect {
 
-		public function reportComment() {
-
-			//$_POST['reportComment']
-		}
-
 		public function getAllReportedComments($reported) {
 
 			$db = $this->dbConnect();
@@ -29,6 +24,14 @@
 
 			$reqComment = $db->prepare('DELETE FROM comments WHERE id = ?');
 			$reqComment->execute(array($id_deleted_comment));
+		}
+
+		public function noDeleteComment($id_no_delete_comment) {
+
+			$db = $this->dbConnect();
+
+			$reqComment = $db->prepare('UPDATE comments SET reported = 0 WHERE id = ?');
+			$reqComment->execute(array($id_no_delete_comment));
 		}
 	}
 

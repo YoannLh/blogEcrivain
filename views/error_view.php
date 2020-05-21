@@ -1,19 +1,19 @@
 <!doctype html>
 <html>
-<head>
+	<head>
 
-    <?php include_once 'views/includes/head.php'?>
+	    <?php include_once 'views/includes/head.php'?>
 
-    <title><?= ucfirst($page) ?></title>
-</head>
+	    <title><?= ucfirst($page) ?></title>
+	</head>
 
-<body>
+	<body>
 
-    <?php include_once 'views/includes/header.php'?>
+	    <?php include_once 'views/includes/header.php'?>
 
-    <h1>Erreur 404 ! Cette page n'existe pas !</h1>
+	    <h1>Erreur 404 ! Cette page n'existe pas !</h1>
 
-    <?php include_once 'views/includes/footer.php'?>
+	    <?php include_once 'views/includes/footer.php'?>
 
-</body>
+	</body>
 </html>

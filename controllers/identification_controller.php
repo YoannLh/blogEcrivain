@@ -7,6 +7,12 @@
 
 	}
 
+	if(isset($_POST['forgotten_password'])) {
+
+		header('location: reset_password');
+		exit();
+	}
+
 	if(!empty($_POST['mail']) && !empty($_POST['password'])) {
 
 		$mail = str_secur($_POST['mail']);
@@ -14,21 +20,26 @@
 
 		if (!filter_var($mail, FILTER_VALIDATE_EMAIL)) {
 
-			echo "Authentification impossible :/";
+			echo "Mail non valide :/";
 
 		}
 
-		$req = $db->prepare('SELECT mail as askingEmailExists FROM users WHERE mail = ?');
-		$req->execute(array($mail));
+		$reqMail = $db->prepare('SELECT mail as askingEmailExists FROM users WHERE mail = ?');
+		$reqMail->execute(array($mail));
 
-		while($user_identification = $req->fetch()) {
+		// if($reqMail->fetch()['askingEmailExists'] == NULL) {
+
+		// 	echo "Authentification impossible :/";
+		// }
+
+		while($user_identification = $reqMail->fetch()) {
 
 			if($user_identification['askingEmailExists'] == $mail) {
 
-				$req = $db->prepare('SELECT password, pseudo, rank FROM users WHERE mail = ?');
-				$req->execute(array($mail));
+				$reqPassword = $db->prepare('SELECT password, pseudo, rank FROM users WHERE mail = ?');
+				$reqPassword->execute(array($mail));
 
-				while($compare_password = $req->fetch()) {
+				while($compare_password = $reqPassword->fetch()) {
 
 					if($compare_password['password'] == password_verify($password, $compare_password['password'])) {
 
@@ -45,7 +56,7 @@
 			
 					}
 				}
-			} 
-		}
+			}
+		}	
 	}
 ?>

@@ -27,6 +27,8 @@
 
 		?>
 
+		<?= noDeleteComment() ?>
+
 		<?= deleteComment() ?>
 
 		<?= showAllReportedComment() ?>
