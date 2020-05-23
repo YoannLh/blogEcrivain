@@ -2,14 +2,14 @@
 
 	if (isset($_SESSION['connect']) && isset($_SESSION['pseudo'])) {
 
-		header('location: home');
+		header('location: ?page=home');
 		exit();
 
 	}
 
 	if(isset($_POST['forgotten_password'])) {
 
-		header('location: reset_password');
+		header('location: ?page=reset_password');
 		exit();
 	}
 
@@ -47,7 +47,7 @@
 						$_SESSION['pseudo'] = ucfirst($compare_password['pseudo']);
 						$_SESSION['rank'] = $compare_password['rank'];
 
-						header('location: home');
+						header('location: ?page=home');
 						exit();
 
 					} else {

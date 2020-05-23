@@ -12,7 +12,7 @@
 					<tr><td>Mot de passe</td><td><input name="password" type="text"></td></tr>
 				</table>
 				<button type="submit">S'identifier</button>
-				<a href="home">Retour au site</a>
+				<a href="?page=">Retour au site</a>
 				<input 
 					class="btn btn-link forgotten_password" 
 					type="submit" 

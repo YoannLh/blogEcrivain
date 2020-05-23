@@ -1,5 +1,31 @@
 <?php
 
+	if(isset($_POST['deconnexion'])) {
+
+		$_SESSION = array();
+
+		header('location: ?page=home');
+		exit();
+	}
+
+	if(isset($_POST['return'])) {
+
+		header('location: ?page=home');
+		exit();
+	}
+
+	if(isset($_POST['writeNew']) && $_SESSION['rank'] == "admin") {
+
+		header('location: ?page=tiny');
+		exit();
+	}
+
+	if(isset($_POST['moderate']) && $_SESSION['rank'] == "admin") {
+
+		header('location: ?page=comment_manager');
+		exit();
+	}
+
 	include_once 'models/home_model.php';
 
 	if($_SESSION['rank'] == "admin") {
@@ -14,32 +40,6 @@
 
 		include_once 'views/includes/header.php';
 
-	}
-
-	if(isset($_POST['deconnexion'])) {
-
-		$_SESSION = array();
-
-		header('location: home');
-		exit();
-	}
-
-	if(isset($_POST['return'])) {
-
-		header('location: home');
-		exit();
-	}
-
-	if(isset($_POST['writeNew'])) {
-
-		header('location: tiny');
-		exit();
-	}
-
-	if(isset($_POST['moderate'])) {
-
-		header('location: comment_manager');
-		exit();
 	}
 
 	function showThreeLastPosts() { 

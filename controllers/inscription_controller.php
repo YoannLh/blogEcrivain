@@ -1,10 +1,10 @@
 <?php
 
-	include_once 'views/Inscription_model.php';
+	include_once 'models/Inscription_model.php';
 
 	if (isset($_SESSION['connect']) && isset($_SESSION['pseudo'])) {
 
-		header('location: home');
+		header('location: ?page=home');
 		exit();
 
 	}

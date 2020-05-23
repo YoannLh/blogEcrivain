@@ -18,25 +18,25 @@
 
 		$_SESSION = array();
 
-		header('location: home');
+		header('location: ?page=home');
 		exit();
 	}
 
 	if(isset($_POST['return'])) {
 
-		header('location: home');
+		header('location: ?page=home');
 		exit();
 	}
 
 	if(isset($_POST['writeNew'])) {
 
-		header('location: tiny');
+		header('location: ?page=tiny');
 		exit();
 	}
 
 	if(isset($_POST['moderate'])) {
 
-		header('location: comment_manager');
+		header('location: ?page=comment_manager');
 		exit();
 	}
 
@@ -57,7 +57,7 @@
 		$_POST['actualPost'] = $showOnePost->getAllPost($id)['post'];
 
 		echo '<div class="readingPost"> 
-				<h4 class="blog-post-title" style="text-align: center">' . $_POST['actualTitle'] . '</h4>
+				<h4 class="blog-post-title">' . $_POST['actualTitle'] . '</h4>
 				<p>' . $_POST['actualPost'] . '</p>
 			</div>';
 

@@ -1,10 +1,8 @@
 <?php
 
-	include_once 'views/tiny_model.php';
-
 	if(isset($_POST['return'])) {
 
-		header('location: home');
+		header('location: ?page=home');
 		exit();
 	}
 
@@ -12,15 +10,17 @@
 
 		$_SESSION = array();
 
-		header('location: home');
+		header('location: ?page=home');
 		exit();
 	}
 
 	if(isset($_POST['moderate'])) {
 
-		header('location: comment_manager');
+		header('location: ?page=comment_manager');
 		exit();
 	}
+
+	include_once 'views/tiny_model.php';
 
 	if (!empty($_POST['newPost'])  && !empty($_POST['title']) && isset($_POST['submit'])) {
 

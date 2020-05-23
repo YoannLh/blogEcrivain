@@ -14,7 +14,7 @@
 					<tr><td>Vérification du mot de passe</td><td><input name="password_two" type="text"></td></tr>
 				</table>
 				<button type="submit">Envoyez</button>
-				<a href="home">Retour au site</a>
+				<a href="?page=home">Retour au site</a>
 			</form>
 		</div>
 

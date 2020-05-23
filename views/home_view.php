@@ -24,10 +24,10 @@
 
 		  <div class="firstPicture jumbotron p-4 p-md-5 text-white rounded bg-dark">
 		    <div class="col-md-6 px-0">
-		      <h1 style="text-shadow: 1px 1px 2px black" class="display-4 font-italic">Plongez dans une épopée glaçiale...</h1>
-		      <p style="text-shadow: 1px 1px 2px black" class="lead my-3">Either est une archéologue envoyée en Alaska pour ce qui ne devait être qu'une simple fouille. Mais bien des secrets sommeillent profondemment dans la glace...</p>
+		      <h1 style="text-shadow: 1px 1px 2px black" class="display-4 font-italic">Plongez dans une épopée glaçante...</h1>
+		      <p style="text-shadow: 1px 1px 2px black" class="lead my-3">Bien des Secrets qui ne devraient être réveillés sommeillent parfois profondemment dans la glace...</p>
 		      <p style="text-shadow: 1px 1px 2px black" class="lead mb-0">
-		      	<a href="home?page=showonepostandcomments&id=12" class="text-white font-weight-bold">Commencez : Chapitre Un</a>
+		      	<a href="?page=showonepostandcomments&id=12" class="text-white font-weight-bold">Commencez : Chapitre Un</a>
 		      </p>
 		    </div>
 		  </div>
@@ -68,16 +68,11 @@
 		<main role="main" class="container">
 		  <div class="row">
 		    <div class="col-md-8 blog-main">
-		      <h3 class="pb-4 mb-4 font-italic border-bottom">
+		      <h3 class="pb-4 mb-4 font-italic border-bottom" style="font-size: 2.7em">
 		        Les derniers posts
 		      </h3>
 
 		      <?= showThreeLastPosts() ?>
-
-		      <nav class="blog-pagination">
-		        <a class="btn btn-outline-primary" href="#">Older</a>
-		        <a class="btn btn-outline-secondary disabled" href="#" tabindex="-1" aria-disabled="true">Newer</a>
-		      </nav>
 
 		    </div><!-- /.blog-main -->
 
@@ -89,14 +84,6 @@
 
 		      <?= showAllLastPosts(); ?>
 
-		      <div class="p-4">
-		        <h4 class="font-italic">Elsewhere</h4>
-		        <ol class="list-unstyled">
-		          <li><a href="#">GitHub</a></li>
-		          <li><a href="#">Twitter</a></li>
-		          <li><a href="#">Facebook</a></li>
-		        </ol>
-		      </div>
 		    </aside><!-- /.blog-sidebar -->
 
 		  </div><!-- /.row -->
