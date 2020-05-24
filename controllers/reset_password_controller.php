@@ -19,14 +19,12 @@
  
 		// Le lien d'activation est composé du login(log) et de la clé(cle)
 		$message = '<html><head><title></title></head><body><div>
-						<p>Bonjour,
-						<br>Vous avez demandé une récupération de mot de passe. Afin de procéder, veuillez cliquer sur le lien ci-dessous.
+						<p>Bonjour,</p>
+						<p>Vous avez demandé une récupération de mot de passe. Afin de procéder, veuillez cliquer sur le lien ci-dessous.
 						</p>
  
-						<p>http://votresite.com/activation.php?log=' . 
-						'urlencode($login)' . 
-						'&cle=' . 
-						'urlencode($cle) . ' .
+						<p>http://lhostisyoann.com/projet-4/?page=create_new_password&log=' . 
+						urlencode($destinataire) . 
 						'</p>
  
  
