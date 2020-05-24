@@ -19,8 +19,10 @@
 				$createNewPassword = new createNewPassword;
 
 				if($createNewPassword->checkIfMailExists($mail)['askingMail'] == $mail) {
+
+					$passwordCrypted = password_hash($password_two, PASSWORD_DEFAULT);
 		
-					$createNewPassword->sendNewPassword($password_two, $mail);
+					$createNewPassword->sendNewPassword($passwordCrypted, $mail);
 
 				}
 			}

@@ -13,10 +13,10 @@
 		exit();
 	}
 
-	if(!empty($_POST['mail']) && !empty($_POST['password'])) {
+	if(!empty($_POST['mail']) && !empty($_POST['passwordIdentification'])) {
 
 		$mail = str_secur($_POST['mail']);
-		$password = str_secur($_POST['password']);
+		$password = str_secur($_POST['passwordIdentification']);
 
 		if (!filter_var($mail, FILTER_VALIDATE_EMAIL)) {
 

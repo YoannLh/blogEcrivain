@@ -16,13 +16,13 @@
 			return $reqMail->fetch();
 		}
 
-		public function sendNewPassword($password_two, $mail) {
+		public function sendNewPassword($passwordCrypted, $mail) {
 
 			$db = $this->dbConnect();
 
 			$sendNewPassword = $db->prepare('UPDATE users SET password = ? WHERE mail = ?');
 
-			$sendNewPassword->execute(array($password_two, $mail));
+			$sendNewPassword->execute(array($passwordCrypted, $mail));
 		}
 	}
 

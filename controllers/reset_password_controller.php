@@ -9,8 +9,6 @@
 
 	function sendMail($checkingMail) {
 
-		echo $checkingMail;
-
 		$destinataire = $checkingMail;
 		$sujet = "Récupération mot de passe";
 		$headers[] = 'MIME-Version: 1.0';
@@ -44,8 +42,6 @@
 			$checkingMail = str_secur($_POST['checkingMail']);
 
 			$reset_password = new ResetPassword;
-
-			debug($reset_password->checkIfMailExists($checkingMail));
 
 			if($reset_password->checkIfMailExists($checkingMail)['numberEmail'] == 1) {
 
