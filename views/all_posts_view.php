@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 	<head>
@@ -5,7 +6,7 @@
 		<?php include_once 'views/includes/head.php'; ?>
 
 	</head>
-	<body>
+	<body id="body">
 
 		<?php
 
@@ -25,13 +26,10 @@
 
 		?>
 
-		<?= noDeleteComment() ?>
-
-		<?= deleteComment() ?>
-
-		<?= showAllReportedComment() ?>
+		<?php showAllPosts() ?>
 
 		<?php include_once 'views/includes/footer.php'; ?>
 
 	</body>
 </html>
+

@@ -9,6 +9,7 @@
 
 	function sendMail($checkingMail) {
 
+		$token = time();
 		$destinataire = $checkingMail;
 		$sujet = "Récupération mot de passe";
 		$headers[] = 'MIME-Version: 1.0';
@@ -24,12 +25,18 @@
 						<p>http://lhostisyoann.com/projet-4/?page=create_new_password&log=' . 
 						urlencode($destinataire) . 
 						'</p>
+
+						<p>Ce lien s\'autodétruira dans 5 minutes.</p>
  
  
 						<p>---------------</p>
 
 						<p>Ceci est un mail automatique, Merci de ne pas y répondre.</p>
 					</div></body></html>';
+
+		$reset_password = new ResetPassword;
+
+		$reset_password->sendTokenTime($token, $destinataire);
  
 		mail($destinataire, $sujet, $message, implode("\r\n", $headers)); 
 

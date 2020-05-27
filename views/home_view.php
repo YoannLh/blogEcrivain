@@ -14,8 +14,8 @@
 
 	    <div class="nav-scroller py-1 mb-2">
 		    <nav class="nav d-flex justify-content-between">
-		      <a class="p-2 text-muted" href="#">Le roman</a>
-		      <a class="p-2 text-muted" href="#">Tous les billets</a>
+		      <a class="p-2 text-muted" href="?page=the_novel">Le roman</a>
+		      <a class="p-2 text-muted" href="?page=all_posts">Tous les chapitres</a>
 		      <a class="p-2 text-muted" href="#">Livre d'or</a>
 		      <a class="p-2 text-muted" href="#">L'auteur</a>
 		      <a class="p-2 text-muted" href="#">Contact</a>

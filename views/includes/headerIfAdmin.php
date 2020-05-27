@@ -16,15 +16,13 @@
                 Déconnexion
           </button>
           <div style="margin-top: 65px">
-            <button class="btn btn-sm btn-outline-secondary" type="submit" name="return">Acceuil</button>
+            <button class="btn btn-sm btn-outline-secondary" type="submit" name="return">Accueil</button>
             <button class="btn btn-sm btn-outline-secondary" type="submit" name="writeNew">Ecrire un post</button>
 
             <button class="btn btn-sm btn-outline-secondary" type="submit" name="moderate" style="position: relative">
               Commentaires signalés
 
               <?php 
-
-              getAllReportedComments();
 
                 function getAllReportedComments() {
 
@@ -37,11 +35,9 @@
 
                     if($nb_of_reported_comments['number'] > 0) { 
 
-                      $_SESSION['alert'] = '<div class="alertReportedComments">' . $nb_of_reported_comments['number'] . '</div>';
+                      echo $alert = '<div class="alertReportedComments">' . $nb_of_reported_comments['number'] . '</div>';
 
-                      echo $_SESSION['alert'];
-
-                    } else {
+                    } else { 
 
                       echo "";
                     }
@@ -50,7 +46,15 @@
                   
                 }
 
-      
+                if($_GET['page'] != 'comment_manager') {
+
+                  getAllReportedComments();
+                }
+
+                
+
+                
+
 
               ?>
            

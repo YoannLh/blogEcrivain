@@ -57,7 +57,7 @@
 		$_POST['actualPost'] = $showOnePost->getAllPost($id)['post'];
 
 		echo '<div class="readingPost"> 
-				<h4 class="blog-post-title">' . $_POST['actualTitle'] . '</h4>
+				<h4 class="blog-post-title center">' . $_POST['actualTitle'] . '</h4>
 				<p>' . $_POST['actualPost'] . '</p>
 			</div>';
 
@@ -82,11 +82,11 @@
 
 		echo '<div class="flex previousAndNext">
 				<div style="visibility: ' . $displayPrevious . '">
-					<a href="home?page=showonepostandcomments&id=' . ( $id - 1 ) . '">Precédent</a>
+					<a href="?page=showonepostandcomments&id=' . ( $id - 1 ) . '">Precédent</a>
 				</div>
 				<div><a href="#body">Haut de page</a></div>
 				<div style="visibility: ' . $displayNext . '">
-					<a href="home?page=showonepostandcomments&id=' . ( $id + 1 ) . '">Suite</a>
+					<a href="?page=showonepostandcomments&id=' . ( $id + 1 ) . '">Suite</a>
 				</div>
 			</div>';
 	}

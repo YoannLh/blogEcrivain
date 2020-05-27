@@ -14,6 +14,16 @@
 
 			return $reqMail->fetch();
 		}
+
+		public function sendTokenTime($token, $destinataire) {
+
+			$db = $this->dbConnect();
+
+			$reqToken = $db->prepare('UPDATE users SET token = ? WHERE mail = ?');
+
+			$reqToken->execute(array($token, $destinataire));
+
+		}
 	}
 
 ?>

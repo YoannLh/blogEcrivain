@@ -1,6 +1,16 @@
 <?php
 
-	class Identification {
+	class Identification extends Connect {
 
-		
+		public function checkIfMailAlreadyExists() {
+
+
+		}
+
+		public function getAllInformationsAboutUser() {
+
+			
+		}
 	}
+
+?>

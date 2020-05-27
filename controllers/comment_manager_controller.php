@@ -80,15 +80,6 @@
 		}
 	}
 
-	function showReportedCommentsInAlert() {
-
-		global $nb_reported_comments;
-
-		echo $nb_reported_comments;
-
-		return $_SESSION['$nb_reported_comments'] = $nb_reported_comments;
-	}
-
 	function noDeleteComment() {
 
 		if(isset($_POST['noDeleteComment']) && isset($_SESSION['pseudo']) && $_SESSION['rank'] == "admin") {

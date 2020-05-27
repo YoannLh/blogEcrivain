@@ -1,12 +1,21 @@
 <?php
 
+	$createNewPassword = new createNewPassword;
+
+	$tokenTest = time();
+
+	if($tokenTest > $createNewPassword->ckeckTokenTime($_GET['log'])['token'] + 300) {
+
+		echo "Le temps de validité du lien a expiré. Veuillez renouveler votre demande de modification de mot de passe.";
+		exit();
+	}
+
 	if(isset($_POST['sendNewPassword'])) { 
 
 		header('location: ?page=identification');
-					
 	}
 
-	function checkMailAndSendNewPassword() { 
+	function checkMailAndTokenAndSendNewPassword() { 
 
 		if (isset($_GET['log']) && !empty($_GET['log']) && !isset($_SESSION['pseudo'])) {
 
@@ -18,12 +27,16 @@
 
 				$createNewPassword = new createNewPassword;
 
+				$createNewPassword->ckeckTokenTime($mail)['token'];
+
 				if($createNewPassword->checkIfMailExists($mail)['askingMail'] == $mail) {
 
-					$passwordCrypted = password_hash($password_two, PASSWORD_DEFAULT);
-		
-					$createNewPassword->sendNewPassword($passwordCrypted, $mail);
+					if(isset($_POST['sendNewPassword'])) { 
 
+						$passwordCrypted = password_hash($password_two, PASSWORD_DEFAULT);
+		
+						$createNewPassword->sendNewPassword($passwordCrypted, $mail);
+					}
 				}
 			}
 		}

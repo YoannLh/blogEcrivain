@@ -17,7 +17,7 @@
 			</form>
 		</div>
 
-		<?php checkMailAndSendNewPassword() ?>
+		<?php checkMailAndTokenAndSendNewPassword() ?>
 
 	</body>
 </html>
