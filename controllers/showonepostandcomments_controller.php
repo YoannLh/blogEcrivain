@@ -190,4 +190,30 @@
 		}
 	}
 
+	function editPost() {
+
+
+
+
+
+
+
+	}
+
+	function deletePost() {
+
+
+
+
+
+
+
+
+
+
+
+
+ }
+
+
 ?>

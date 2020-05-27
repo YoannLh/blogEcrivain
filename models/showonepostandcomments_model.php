@@ -50,12 +50,20 @@
 
 		public function deleteComment($id_deleted_comment) {
 
-			// supprimer le post 
-
 			$db = $this->dbConnect();
 
 			$reqComment = $db->prepare('DELETE FROM comments WHERE id = ?');
 			$reqComment->execute(array($id_deleted_comment));
+
+		}
+
+		public function editPost() {
+
+
+		}
+
+		public function deletePost() {
+
 
 		}
 	}
