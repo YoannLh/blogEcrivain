@@ -2,13 +2,15 @@
 
 	if($_SESSION['rank'] == "admin") {
 
-		$buttonReportOrDelete = '<button type="submit" class="btn btn-link" id="buttonReportOrDelete" 									name="deleteComment">
+		$buttonReportOrDeleteComment = '<button type="submit" class="btn btn-link" id="buttonReportOrDelete" 									name="deleteComment">
 									Supprimer
 								</button>';
 
+		
+
 	} else {
 
-		$buttonReportOrDelete = '<button type="submit" class="btn btn-link" id="buttonReportOrDelete" 									name="reportComment">
+		$buttonReportOrDeleteComment = '<button type="submit" class="btn btn-link" id="buttonReportOrDelete" 									name="reportComment">
 									Signaler	
 								</button>';
 
@@ -43,6 +45,12 @@
 	if(isset($_GET['id']) && !empty($_GET['id'])) {
 
 		$id = str_secur($_GET['id']);
+
+	}
+
+	if(isset($_POST['delete_comment']) && $_SESSION['rank'] == "admin") {
+
+		header('location: ?page=home');
 
 	}
 
@@ -96,7 +104,7 @@
 
 		global $id;
 
-		global $buttonReportOrDelete;
+		global $buttonReportOrDeleteComment;
 
 		$getComments = new ShowOnePostAndComments;
 
@@ -120,7 +128,7 @@
 							'"' . $comment . '"' . 
 						'</p>
 						<form method="post">' . 
-							$buttonReportOrDelete . 
+							$buttonReportOrDeleteComment . 
 							'<textarea name="id_reported_comment" style="display: none">' .
 								$id_comment .
 							'</textarea>
@@ -192,28 +200,21 @@
 
 	function editPost() {
 
-
-
-
-
-
-
+		
 	}
 
 	function deletePost() {
 
+		global $id;
 
+		if(isset($_POST['delete_comment']) && $_SESSION['rank'] == "admin") {
 
+			$managerPosts = new ShowOnePostAndComments;
 
+			$managerPosts->deletePost($id);
 
-
-
-
-
-
-
-
- }
+		}
+	}
 
 
 ?>

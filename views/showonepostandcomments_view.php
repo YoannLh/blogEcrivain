@@ -25,6 +25,23 @@
 
 		?>
 
+		<div class="flex">
+			<form method="post" style="margin: 3% auto">
+				<table>
+					<tr>
+						<td>
+							<input class="form_control" type="submit" name="edit_comment" value="Modifier ce post"/>
+						</td>
+						<td>
+							<input class="form_control" type="submit" name="delete_comment" value="Supprimer ce post"/>
+						</td>
+					</tr>
+				</table>
+			</form>
+		</div>
+
+		<?= deletePost() ?>
+
 		<?= getReportedComment() ?>
 
 		<?= deleteComment() ?>

@@ -62,9 +62,13 @@
 
 		}
 
-		public function deletePost() {
+		public function deletePost($id_post) {
 
+			$db = $this->dbConnect();
 
+			$reqPosts = $db->prepare('DELETE FROM posts WHERE id = ?');
+			$reqPosts->execute(array($id_post));
+	
 		}
 	}
 
