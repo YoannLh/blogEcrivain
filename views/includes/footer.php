@@ -1,6 +1,6 @@
 <footer class="blog-footer">
-  <p>Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+  <p>Blog développé par l'agence FakeAgency</p>
   <p>
-    <a href="#">Back to top</a>
+    <a style="scroll-behavior: smooth" href="#">Back to top</a>
   </p>
 </footer>

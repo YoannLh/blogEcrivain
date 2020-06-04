@@ -57,8 +57,14 @@
 
 		}
 
-		public function editPost() {
+		public function editPost($id_post) {
 
+			$db = $this->dbConnect();
+
+			$reqEditPost = $db->prepare('SELECT id, title, post FROM posts WHERE id = ?');
+			$reqEditPost->execute(array($id_post));
+
+			$_SESSION['edit_post'] = $reqEditPost->fetch();
 
 		}
 

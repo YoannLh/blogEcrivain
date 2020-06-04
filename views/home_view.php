@@ -16,9 +16,8 @@
 		    <nav class="nav d-flex justify-content-between">
 		      <a class="p-2 text-muted" href="?page=the_novel">Le roman</a>
 		      <a class="p-2 text-muted" href="?page=all_posts">Tous les chapitres</a>
-		      <a class="p-2 text-muted" href="#">Livre d'or</a>
-		      <a class="p-2 text-muted" href="#">L'auteur</a>
-		      <a class="p-2 text-muted" href="#">Contact</a>
+		      <a class="p-2 text-muted" href="?page=the_author">L'auteur</a>
+		      <a class="p-2 text-muted" href="?page=contact">Contact</a>
 		    </nav>
  		 </div>
 

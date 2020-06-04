@@ -14,6 +14,16 @@
 
 		}
 
+		public function postEditedPost($title, $post, $id) {
+
+			$db = $this->dbConnect();
+
+			$reqEditedPost = $db->prepare('UPDATE posts SET title = ?, post = ? WHERE id = ?');
+			
+			$reqEditedPost->execute(array($title, $post, $id));
+
+		}
+
 		public function postNewPost($title, $post) {
 
 			$db = $this->dbConnect();
@@ -24,24 +34,24 @@
 
 		}
 
-		public function showAllPosts() {
+		// public function showAllPosts() {
 
-			$db = $this->dbConnect();
+		// 	$db = $this->dbConnect();
 
-			$reqShow = $db->query('SELECT * post FROM posts');
+		// 	$reqShow = $db->query('SELECT * post FROM posts');
 
-			return $reqShow;
+		// 	return $reqShow;
 
-		}
+		// }
 
-		public function showLastPost() {
+		// public function showLastPost() {
 
-			$db = $this->dbConnect();
+		// 	$db = $this->dbConnect();
 
-			$reqShowLastPost = $db->query('SELECT * post FROM posts');
+		// 	$reqShowLastPost = $db->query('SELECT * post FROM posts');
 
-			return $reqShowLastPost;
-		}
+		// 	return $reqShowLastPost;
+		// }
 	}
 
 ?>

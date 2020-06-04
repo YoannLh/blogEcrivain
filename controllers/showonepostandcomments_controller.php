@@ -54,6 +54,12 @@
 
 	}
 
+	if(isset($_POST['edit_comment']) && $_SESSION['rank'] == "admin") {
+
+			header('location: ?page=tiny');
+
+		}
+
 	// RECUPERE ET AFFICHE LES POSTS
 	function showTitleAndPost() {
 
@@ -198,9 +204,38 @@
 		}
 	}
 
+	function showFormEditAndDelete() {
+
+		if($_SESSION['rank'] == "admin") {
+
+			echo '<div class="flex">
+				<form method="post" style="margin: 3% auto">
+					<table>
+						<tr>
+							<td>
+								<input class="form_control" type="submit" name="edit_comment" value="Modifier ce post"/>
+							</td>
+							<td>
+								<input class="form_control" type="submit" name="delete_comment" value="Supprimer ce post"/>
+							</td>
+						</tr>
+					</table>
+				</form>
+			</div>';
+		}
+	}
+
 	function editPost() {
 
-		
+		global $id;
+
+		if(isset($_POST['edit_comment']) && $_SESSION['rank'] == "admin") {
+
+			$managerPosts = new ShowOnePostAndComments;
+
+			$managerPosts->editPost($id);
+
+		}
 	}
 
 	function deletePost() {

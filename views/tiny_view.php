@@ -13,13 +13,38 @@
         </header>
 
         <form method="post">
-            <textarea placeholder="Titre du chapitre..." name="title"></textarea>
-            <textarea placeholder="Texte..." name="newPost"></textarea>
+            <textarea placeholder="Titre du chapitre..." name="title">
+                <?php if(isset($_SESSION['edit_post'])) { 
+
+                    echo $_SESSION['edit_post']['title'];
+
+                } else {
+
+                    echo "";
+
+                } ?>
+            </textarea>
+            <textarea placeholder="Texte..." name="newPost">
+                <?php if(isset($_SESSION['edit_post'])) { 
+
+                    echo $_SESSION['edit_post']['post']; 
+
+                } else {
+
+                    echo "";
+
+                } ?>
+            </textarea>
               <script>
                 tinymce.init({
                     selector: 'textarea'});
             </script>
         <button type="submit" name="submit">Poster</button>
         </form>
+
+        <?php sendPost() ?>
+
+        <?php editPost() ?>
+
     </body>
 </html>
