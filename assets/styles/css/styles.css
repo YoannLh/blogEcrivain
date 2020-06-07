@@ -21,6 +21,22 @@ body {
   font-size: 3rem;
 }
 
+@media screen and (max-width: 901px) 
+{
+  .blog-header-logo
+  {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 760px) 
+{
+  .blog-header-logo
+  {
+    font-size: 1rem;
+  }
+}
+
 .blog-header-logo:hover {
   text-decoration: none;
 }
@@ -135,11 +151,28 @@ h1, h2, h3, h4, h5, h6 {
   text-indent: 25px;
 }
 
+@media screen and (max-width: 901px) 
+{
+  .readingPost
+  {
+    width: 95%;
+  }
+}
+
+
 .previousAndNext {
-  width: 55%;
+  width: 75%;
   margin: auto;
   margin-top: 40px;
   justify-content: space-between;
+}
+
+@media screen and (max-width: 760px) 
+{
+  .previousAndNext 
+  {
+    font-size: 1rem;
+  }
 }
 
 .formInscriptionEtIdentification {
@@ -154,6 +187,12 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   bottom: -6px;
   right: -6px;
+}
+
+.not_yet_subscribed {
+  position: absolute;
+  bottom: 1px;
+  left: 6px;
 }
 
 .flex {

@@ -13,6 +13,9 @@
 				</table>
 				<button type="submit">S'identifier</button>
 				<a href="?page=">Retour au site</a>
+				<div class="not_yet_subscribed">
+					<a href="?page=inscription">Pas encore inscrit(e)?</a>
+				</div>
 				<input 
 					class="btn btn-link forgotten_password" 
 					type="submit" 

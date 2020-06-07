@@ -7,22 +7,13 @@
       <div class="col-4 text-center">
         <h1 class="blog-header-logo cold-blue"><a href="?page=home">Billet Simple Pour l'Alaska</a></h1> 
       </div>
-      <div class="col-4 d-flex" style="height: 100px">
-        <form method="post">
-          <button class="btn btn-sm btn-outline-secondary" 
-                  style="position: absolute; top: 1px; right: 18px;"
-                  type="submit" 
-                  name="deconnexion">
-                Déconnexion
-          </button>
-          <div style="margin-top: 65px">
-            <button class="btn btn-sm btn-outline-secondary" type="submit" name="return">Accueil</button>
-            <button class="btn btn-sm btn-outline-secondary" type="submit" name="writeNew">Ecrire un post</button>
+      
+      <div class="col-4 flex" style="justify-content: flex-end">
+        <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Menu
 
-            <button class="btn btn-sm btn-outline-secondary" type="submit" name="moderate" style="position: relative">
-              Commentaires signalés
-
-              <?php 
+                <?php 
 
                 function getAllReportedComments() {
 
@@ -51,17 +42,24 @@
                   getAllReportedComments();
                 }
 
-                
-
-                
-
-
               ?>
-           
-          </button>
-            
-        </div>
-        </form>
+
+              </button>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                <form method="post">
+                  <button class="btn btn-link" type="submit" name="writeNew">
+                    <a>Ecrire un billet</a>
+                  </button>
+                  <button class="btn btn-link" type="submit" name="moderate">
+                    <a>Commentaires</a>
+                  </button>
+                  <button class="btn btn-link" type="submit" name="deconnexion">
+                    <a>Déconnexion</a>
+                  </button>
+                </form>
+              </div>
+            </div>
+
       </div>
     </div>
   </header>

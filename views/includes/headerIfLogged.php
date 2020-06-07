@@ -9,7 +9,6 @@
       </div>
       <div class="col-4 d-flex justify-content-end align-items-center">
       <form method="post">
-        <button class="btn btn-sm btn-outline-secondary" type="submit" name="return">Accueil</button>
         <button class="btn btn-sm btn-outline-secondary" type="submit" name="deconnexion">Déconnexion</button>
       </form>
     </div>

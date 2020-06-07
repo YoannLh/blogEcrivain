@@ -37,13 +37,13 @@
 		      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
 		        <div class="col p-4 d-flex flex-column position-static">
 		          <strong class="d-inline-block mb-2 text-primary">Du même auteur</strong>
-		          <h3 class="mb-0">Featured post</h3>
+		          <h3 class="mb-0">Du rififi chez les fifous</h3>
 		          <div class="mb-1 text-muted">Nov 12</div>
-		          <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-		          <a href="#" class="stretched-link">Continue reading</a>
+		          <p class="card-text mb-auto">Découvrez l'ambiance sulfureuse des bars clandestins de l'Amerique des années 30...</p>
+		          <a href="?page=book1" class="stretched-link"></a>
 		        </div>
 		        <div class="col-auto d-none d-lg-block">
-		          <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+		        	<img src="assets/images/cover_book1.jpeg" style="width: 200px" />
 		        </div>
 		      </div>
 		    </div>
@@ -51,13 +51,13 @@
 		      <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
 		        <div class="col p-4 d-flex flex-column position-static">
 		          <strong class="d-inline-block mb-2 text-success">Du même auteur</strong>
-		          <h3 class="mb-0">Post title</h3>
-		          <div class="mb-1 text-muted">Nov 11</div>
-		          <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
-		          <a href="#" class="stretched-link">Continue reading</a>
+		          <h3 class="mb-0">Ferme la fenêtre, il fait froid dehors</h3>
+		          <div class="mb-1 text-muted">Jan 18</div>
+		          <p class="mb-auto">A quoi peut bien aspirer un courant d'air dans la vie ?</p>
+		          <a href="?page=book2" class="stretched-link"></a>
 		        </div>
 		        <div class="col-auto d-none d-lg-block">
-		          <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+		          <img src="assets/images/air.jpg" style="width: 200px" />
 		        </div>
 		      </div>
 		    </div>
