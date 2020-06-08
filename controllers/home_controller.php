@@ -81,8 +81,8 @@
 
 		$i = 0;
 	
-			echo '<div class="p-4">
-			        <h4 class="font-italic">Tous les posts</h4>
+			echo '<div class="p-4 center">
+			        <h4 class="font-italic" style="margin-bottom: 20px">Tous les posts</h4>
 				    <ol class="list-unstyled mb-0">';
 						
 					foreach($showPost->getAllPosts() as $allpost) {

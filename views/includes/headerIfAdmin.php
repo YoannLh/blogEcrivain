@@ -24,9 +24,11 @@
 
                   while($nb_of_reported_comments = $reportedComments->fetch()) {
 
+                    $_SESSION['nb_of_reported_comments'] = $nb_of_reported_comments['number'];
+
                     if($nb_of_reported_comments['number'] > 0) { 
 
-                      echo $alert = '<div class="alertReportedComments">' . $nb_of_reported_comments['number'] . '</div>';
+                      echo $alert = '<div class="alertReportedComments flex"><div style="margin-bottom: 0px">' . $nb_of_reported_comments['number'] . '</div></div>';
 
                     } else { 
 
@@ -51,7 +53,7 @@
                     <a>Ecrire un billet</a>
                   </button>
                   <button class="btn btn-link" type="submit" name="moderate">
-                    <a>Commentaires</a>
+                    <a>Commentaires <?php echo "(" . $_SESSION['nb_of_reported_comments'] . ")" ?></a>
                   </button>
                   <button class="btn btn-link" type="submit" name="deconnexion">
                     <a>Déconnexion</a>
