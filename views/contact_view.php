@@ -4,6 +4,15 @@
 	<?php include_once 'views/includes/head.php'; ?>
 
 	<body id="bodyIdentification">
+		
+		<?php 
+
+			include_once 'views/includes/insert_header.php';
+
+			insertHeader();
+
+		?>
+
 		<div class="flex">
 			<form class="formInscriptionEtIdentification" method="post">
 				<h3>Contact</h3>

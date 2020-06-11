@@ -9,7 +9,7 @@
     <body>
 
         <header>
-            <?php include_once 'views/includes/headerIfAdmin.php'; ?>
+            <?php include_once 'views/includes/headerIfAdmin.php' ?>
         </header>
 
         <form method="post">

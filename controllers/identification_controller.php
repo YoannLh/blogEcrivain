@@ -24,22 +24,15 @@
 
 		}
 
-		$reqMail = $db->prepare('SELECT mail as askingEmailExists FROM users WHERE mail = ?');
-		$reqMail->execute(array($mail));
+		$identification = new Identification;
 
-		// if($reqMail->fetch()['askingEmailExists'] == NULL) {
+		$identification->checkIfMailAlreadyExists($mail);
 
-		// 	echo "Authentification impossible :/";
-		// }
-
-		while($user_identification = $reqMail->fetch()) {
+		while($user_identification = $identification->checkIfMailAlreadyExists($mail)) {
 
 			if($user_identification['askingEmailExists'] == $mail) {
 
-				$reqPassword = $db->prepare('SELECT password, pseudo, rank FROM users WHERE mail = ?');
-				$reqPassword->execute(array($mail));
-
-				while($compare_password = $reqPassword->fetch()) {
+				while($compare_password = $identification->getAllInformationsAboutUser($mail)) {
 
 					if($compare_password['password'] == password_verify($password, $compare_password['password'])) {
 

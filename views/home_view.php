@@ -11,6 +11,13 @@
 	<body>
 
 	    <!-- CONTENU -->
+	    <?php 
+
+			include_once 'views/includes/insert_header.php';
+
+			insertHeader();
+
+		?>
 
 	    <div class="nav-scroller py-1 mb-2">
 		    <nav class="nav d-flex justify-content-between">

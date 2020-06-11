@@ -9,7 +9,13 @@
 
 	<body>
 
-	    <?php include_once 'views/includes/header.php'?>
+	    <?php 
+
+			include_once 'views/includes/insert_header.php';
+
+			insertHeader();
+
+		?>
 
 	    <h1>Erreur 404 ! Cette page n'existe pas !</h1>
 

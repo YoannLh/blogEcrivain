@@ -5,6 +5,14 @@
 
 	<body id="bodyIdentification">
 
+		<?php 
+
+			include_once 'views/includes/insert_header.php';
+
+			insertHeader();
+
+		?>
+
 		<div class="flex">
 			<form class="formInscriptionEtIdentification" method="post">
 				<h3>Nouveau mot de passe</h3>

@@ -4,6 +4,7 @@
 	<?php include_once 'views/includes/head.php' ?>
 
 	<body>
+
 		<div class="flex">
 			<form class="formInscriptionEtIdentification" method="post">
 				<h3>S'inscrire</h3>
