@@ -4,25 +4,25 @@
 
 		$_SESSION = array();
 
-		header('location: ?page=home');
+		header('location: home');
 		exit();
 	}
 
 	if(isset($_POST['return'])) {
 
-		header('location: ?page=home');
+		header('location: home');
 		exit();
 	}
 
 	if(isset($_POST['writeNew'])) {
 
-		header('location: ?page=tiny');
+		header('location: tiny');
 		exit();
 	}
 
 	if(isset($_POST['moderate'])) {
 
-		header('location: ?page=comment_manager');
+		header('location: comment_manager');
 		exit();
 	}
 

@@ -4,8 +4,6 @@
 
 	    <?php include_once 'includes/head.php'; ?>
 
-	    <title><?= ucfirst($page) ?></title>
-
 	</head>
 
 	<body>
@@ -21,10 +19,10 @@
 
 	    <div class="nav-scroller py-1 mb-2">
 		    <nav class="nav d-flex justify-content-between">
-		      <a class="p-2 text-muted" href="?page=the_novel">Le roman</a>
-		      <a class="p-2 text-muted" href="?page=all_posts">Tous les chapitres</a>
-		      <a class="p-2 text-muted" href="?page=the_author">L'auteur</a>
-		      <a class="p-2 text-muted" href="?page=contact">Contact</a>
+		      <a class="p-2 text-muted" href="the_novel">Le roman</a>
+		      <a class="p-2 text-muted" href="all_posts">Tous les chapitres</a>
+		      <a class="p-2 text-muted" href="the_author">L'auteur</a>
+		      <a class="p-2 text-muted" href="contact">Contact</a>
 		    </nav>
  		 </div>
 
@@ -33,7 +31,7 @@
 		      <h1 style="text-shadow: 1px 1px 2px black" class="display-4 font-italic">Plongez dans une épopée glaçante...</h1>
 		      <p style="text-shadow: 1px 1px 2px black" class="lead my-3">Bien des Secrets qui ne devraient être réveillés sommeillent parfois profondemment dans la glace...</p>
 		      <p style="text-shadow: 1px 1px 2px black" class="lead mb-0">
-		      	<a href="?page=showonepostandcomments&id=12" class="text-white font-weight-bold">Commencer : Chapitre Un</a>
+		      	<a href="showonepostandcomments&id=12" class="text-white font-weight-bold">Commencer : Chapitre Un</a>
 		      </p>
 		    </div>
 		  </div>
@@ -47,10 +45,10 @@
 		          <h3 class="mb-0">Du rififi chez les fifous</h3>
 		          <div class="mb-1 text-muted">Nov 12</div>
 		          <p class="card-text mb-auto">Découvrez l'ambiance sulfureuse des bars clandestins de l'Amerique des années 30...</p>
-		          <a href="?page=book1" class="stretched-link"></a>
+		          <a href="book1" class="stretched-link"></a>
 		        </div>
 		        <div class="col-auto d-none d-lg-block">
-		        	<img src="assets/images/cover_book1.jpeg" style="width: 200px" />
+		        	<img src="assets/images/cover_book1.jpeg" alt="ancienne_photo_hommes" style="width: 200px" />
 		        </div>
 		      </div>
 		    </div>
@@ -61,17 +59,17 @@
 		          <h3 class="mb-0">Ferme la fenêtre, il fait froid dehors</h3>
 		          <div class="mb-1 text-muted">Jan 18</div>
 		          <p class="mb-auto">A quoi peut bien aspirer un courant d'air dans la vie ?</p>
-		          <a href="?page=book2" class="stretched-link"></a>
+		          <a href="book2" class="stretched-link"></a>
 		        </div>
 		        <div class="col-auto d-none d-lg-block">
-		          <img src="assets/images/air.jpg" style="width: 200px" />
+		          <img src="assets/images/air.jpg" alt="photo_nuages" style="width: 200px" />
 		        </div>
 		      </div>
 		    </div>
 		  </div>
 		</div>
 
-		<main role="main" class="container">
+		<main class="container">
 		  <div class="row">
 		    <div class="col-md-8 blog-main">
 		      <h3 class="pb-4 mb-4 font-italic border-bottom" style="font-size: 2.7em">

@@ -18,7 +18,7 @@
 	    		<input type="text" placeholder="mail@mail.com" name="checkingMail" />
 	    	</table>
 	    	<button type="submit">Soumettre</button>
-	    	<a href="?page=home">Retour au site</a>
+	    	<a href="home">Retour au site</a>
 	    </form>
 
 	    <?= checkIfMailExists() ?>

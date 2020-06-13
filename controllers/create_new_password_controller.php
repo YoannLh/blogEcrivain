@@ -12,7 +12,7 @@
 
 	if(isset($_POST['sendNewPassword'])) { 
 
-		header('location: ?page=identification');
+		header('location: identification');
 	}
 
 	function checkMailAndTokenAndSendNewPassword() { 

@@ -20,27 +20,39 @@
 
 		$_SESSION = array();
 
-		header('location: ?page=home');
+		header('location: home');
 		exit();
 	}
 
 	if(isset($_POST['return'])) {
 
-		header('location: ?page=home');
+		header('location: home');
 		exit();
 	}
 
 	if(isset($_POST['writeNew'])) {
 
-		header('location: ?page=tiny');
+		header('location: tiny');
 		exit();
 	}
 
 	if(isset($_POST['moderate'])) {
 
-		header('location: ?page=comment_manager');
+		header('location: comment_manager');
 		exit();
 	}
+
+	if(isset($_POST['delete_comment']) && $_SESSION['rank'] == "admin") {
+
+		header('location: home');
+
+	}
+
+	if(isset($_POST['edit_comment']) && $_SESSION['rank'] == "admin") {
+
+			header('location: tiny');
+
+		}
 
 	if(isset($_GET['id']) && !empty($_GET['id'])) {
 
@@ -48,19 +60,6 @@
 
 	}
 
-	if(isset($_POST['delete_comment']) && $_SESSION['rank'] == "admin") {
-
-		header('location: ?page=home');
-
-	}
-
-	if(isset($_POST['edit_comment']) && $_SESSION['rank'] == "admin") {
-
-			header('location: ?page=tiny');
-
-		}
-
-	// RECUPERE ET AFFICHE LES POSTS
 	function showTitleAndPost() {
 
 		global $id;
@@ -96,11 +95,11 @@
 
 		echo '<div class="flex previousAndNext">
 				<div style="visibility: ' . $displayPrevious . '">
-					<a href="?page=showonepostandcomments&id=' . ( $id - 1 ) . '">Precédent</a>
+					<a href=showonepostandcomments?id=' . ( $id - 1 ) . '>Precédent</a>
 				</div>
 				<div><a href="#body">Haut de page</a></div>
 				<div style="visibility: ' . $displayNext . '">
-					<a href="?page=showonepostandcomments&id=' . ( $id + 1 ) . '">Suite</a>
+					<a href=showonepostandcomments?id=' . ( $id + 1 ) . '>Suite</a>
 				</div>
 			</div>';
 	}
@@ -157,7 +156,7 @@
 
 			$comments->postNewComment($id, str_secur($_POST['comment']), $_SESSION['pseudo']);
 
-			header('location: home?page=showonepostandcomments&id=11');
+			header('location: showonepostandcomments&id=11');
   	
 		} else if (!empty($_POST['comment']) && isset($_POST['comment']) && !isset($_SESSION['pseudo'])) {
 

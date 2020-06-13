@@ -21,7 +21,7 @@
 					<tr><td>Confirmer mot de passe</td><td><input name="password_two" type="text"></td></tr>
 				</table>
 				<input type="submit" value="Confirmer" name="sendNewPassword"/>
-				<a href="?page=">Retour au site</a>
+				<a href="?page=home">Retour au site</a>
 			</form>
 		</div>
 

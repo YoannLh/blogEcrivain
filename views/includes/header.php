@@ -4,7 +4,7 @@
       <div class="col-4 pt-1">
       </div>
       <div class="col-4 text-center">
-        <h1 class="blog-header-logo cold-blue"><a href="?page=home">Billet Simple Pour l'Alaska</a></h1> 
+        <h1 class="blog-header-logo cold-blue"><a href="home">Billet Simple Pour l'Alaska</a></h1> 
       </div>
       <div class="col-4 d-flex justify-content-end align-items-center">
 
@@ -13,8 +13,8 @@
                 Menu
               </button>
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item" href="?page=identification">S'identifier</a>
-                <a class="dropdown-item" href="?page=inscription">S'inscrire</a>
+                <a class="dropdown-item" href="identification">S'identifier</a>
+                <a class="dropdown-item" href="inscription">S'inscrire</a>
               </div>
             </div>
 

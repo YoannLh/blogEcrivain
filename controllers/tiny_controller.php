@@ -4,7 +4,7 @@
 
 	if(isset($_POST['return'])) {
 
-		header('location: ?page=home');
+		header('location: home');
 		exit();
 	}
 
@@ -12,19 +12,19 @@
 
 		$_SESSION = array();
 
-		header('location: ?page=home');
+		header('location: home');
 		exit();
 	}
 
 	if(isset($_POST['moderate'])) {
 
-		header('location: ?page=comment_manager');
+		header('location: comment_manager');
 		exit();
 	}
 
 	if (!empty($_POST['newPost'])  && !empty($_POST['title']) && isset($_POST['submit'])) {
 
-		header('location: ?page=home');
+		header('location: home');
 
 	}
 

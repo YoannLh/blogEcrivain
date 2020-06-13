@@ -4,7 +4,7 @@
 
 	if (isset($_SESSION['connect']) && isset($_SESSION['pseudo'])) {
 
-		header('location: ?page=home');
+		header('location: home');
 		exit();
 
 	}
@@ -44,7 +44,7 @@
 
 				$inscription->sendAllInformations($mail, $pseudo, $passwordCrypted, $secret, $rank);
 
-				header('location: ?page=identification');
+				header('location: identification');
 				exit();
 			} 
 		}	

@@ -25,7 +25,7 @@
 					</td></tr>
 				</table>
 				<input type="submit" name="submit" value="Envoyer" />
-				<a href="?page=">Retour au site</a>
+				<a href="home">Retour au site</a>
 			</form>
 		</div>
 

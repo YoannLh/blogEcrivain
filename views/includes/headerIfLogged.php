@@ -5,7 +5,7 @@
         <p class="text-muted" style="margin-top: 17px">Bienvenue <?= $_SESSION['pseudo'] ?></p>
       </div>
       <div class="col-4 text-center">
-        <h1 class="blog-header-logo cold-blue"><a href="?page=home">Billet Simple Pour l'Alaska</a></h1> 
+        <h1 class="blog-header-logo cold-blue"><a href="home">Billet Simple Pour l'Alaska</a></h1> 
       </div>
       <div class="col-4 d-flex justify-content-end align-items-center">
       <form method="post">

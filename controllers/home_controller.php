@@ -4,25 +4,25 @@
 
 		$_SESSION = array();
 
-		header('location: ?page=home');
+		header('location: home');
 		exit();
 	}
 
 	if(isset($_POST['return'])) {
 
-		header('location: ?page=home');
+		header('location: home');
 		exit();
 	}
 
 	if(isset($_POST['writeNew']) && $_SESSION['rank'] == "admin") {
 
-		header('location: ?page=tiny');
+		header('location: tiny');
 		exit();
 	}
 
 	if(isset($_POST['moderate']) && $_SESSION['rank'] == "admin") {
 
-		header('location: ?page=comment_manager');
+		header('location: comment_manager');
 		exit();
 	}
 
@@ -45,7 +45,7 @@
 				$_POST['author'] = "Jean Forteroche";
 
 				echo '<div class="blog-post">
-						<a href=?page=showonepostandcomments&amp;id=' . $_POST['id'] . '>
+						<a href=showonepostandcomments?id=' . $_POST['id'] . '>
 				        	<h2 class="blog-post-title">' . $_POST['title'] . '</h2>
 				        	<p class="blog-post-meta">publié le ' . $_POST['hour'] . " " . 'par' . " " . $_POST['author'] . 
 				        	'</p>' . '<p class="colorPost">' . $_POST['post'] . '</p>
@@ -75,10 +75,10 @@
 
 						if($i >= 4) { 
 
-							$_POST['title'] = $allpost['title'];
 							$_POST['id'] = $allpost['id'];
+							$_POST['title'] = $allpost['title'];
 
-				          	echo '<li><a href=?page=showonepostandcomments&amp;id=' . $_POST['id'] . '>' . $_POST['title'] . '</a></li>';
+				          	echo '<li><a href=showonepostandcomments?id=' . $_POST['id'] . '>' . $_POST['title'] . '</a></li>';
 
 				      	} else {
 
