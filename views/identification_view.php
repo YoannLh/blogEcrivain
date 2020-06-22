@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" style="scroll-behavior: smooth">
 
 	<?php include_once 'views/includes/head.php' ?>
 
@@ -9,7 +9,7 @@
 			<form class="formInscriptionEtIdentification" method="post">
 				<h3>S'identifier</h3>
 				<table>
-					<tr><td>Adresse mail</td><td><input type="mail" name="mail" type="text"></td></tr>
+					<tr><td>Adresse mail</td><td><input type="mail" name="mail"></td></tr>
 					<tr><td>Mot de passe</td><td><input name="passwordIdentification" type="text"></td></tr>
 				</table>
 				<button type="submit">S'identifier</button>

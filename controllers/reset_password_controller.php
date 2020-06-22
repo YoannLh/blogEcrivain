@@ -22,7 +22,7 @@
 						<p>Vous avez demandé une récupération de mot de passe. Afin de procéder, veuillez cliquer sur le lien ci-dessous.
 						</p>
  
-						<p>http://lhostisyoann.com/projet-4/create_new_password&log=' . 
+						<p>http://lhostisyoann.com/projet-4/create_new_password?log=' . 
 						urlencode($destinataire) . 
 						'</p>
 

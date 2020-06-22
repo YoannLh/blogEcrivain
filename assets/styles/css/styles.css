@@ -248,13 +248,13 @@ a:hover {
   border-bottom: 1px solid #e5e5e5;
 }
 
-#buttonReportOrDelete {
+.buttonReportOrDelete {
   position: absolute;
   bottom: 1px;
   right: 1px;
 }
 
-#buttonNoDelete {
+.buttonNoDelete {
   position: absolute;
   bottom: 1px;
   right: 125px;

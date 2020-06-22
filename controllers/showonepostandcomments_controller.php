@@ -2,7 +2,7 @@
 
 	if($_SESSION['rank'] == "admin") {
 
-		$buttonReportOrDeleteComment = '<button type="submit" class="btn btn-link" id="buttonReportOrDelete" 									name="deleteComment">
+		$buttonReportOrDeleteComment = '<button type="submit" class="btn btn-link" class="buttonReportOrDelete" 									name="deleteComment">
 									Supprimer
 								</button>';
 
@@ -10,7 +10,7 @@
 
 	} else {
 
-		$buttonReportOrDeleteComment = '<button type="submit" class="btn btn-link" id="buttonReportOrDelete" 									name="reportComment">
+		$buttonReportOrDeleteComment = '<button type="submit" class="btn btn-link" class="buttonReportOrDelete" 									name="reportComment">
 									Signaler	
 								</button>';
 
@@ -95,11 +95,11 @@
 
 		echo '<div class="flex previousAndNext">
 				<div style="visibility: ' . $displayPrevious . '">
-					<a href=showonepostandcomments?id=' . ( $id - 1 ) . '>Precédent</a>
+					<a href="showonepostandcomments?id=' . ( $id - 1 ) . '">Precédent</a>
 				</div>
 				<div><a href="#body">Haut de page</a></div>
 				<div style="visibility: ' . $displayNext . '">
-					<a href=showonepostandcomments?id=' . ( $id + 1 ) . '>Suite</a>
+					<a href="showonepostandcomments?id=' . ( $id + 1 ) . '">Suite</a>
 				</div>
 			</div>';
 	}
@@ -237,7 +237,7 @@
 		}
 	}
 
-	function deletePost() {
+	function deletePostAndHisComments() {
 
 		global $id;
 
@@ -246,6 +246,8 @@
 			$managerPosts = new ShowOnePostAndComments;
 
 			$managerPosts->deletePost($id);
+
+			$managerPosts->deleteCommentByIdPost($id);
 
 		}
 	}

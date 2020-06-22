@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr" style="scroll-behavior: smooth">
     <head>
 
         <?php include_once 'includes/head.php'; ?> 
@@ -37,7 +37,9 @@
             </textarea>
               <script>
                 tinymce.init({
-                    selector: 'textarea'});
+                    selector: 'textarea',
+                    plugins: 'advlist autolink lists link image charmap print preview hr anchor pagebreak',
+                    toolbar_mode: 'floating'});
             </script>
         <button type="submit" name="submit">Poster</button>
         </form>

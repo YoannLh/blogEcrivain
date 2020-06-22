@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" style="scroll-behavior: smooth">
 
 	<?php include_once 'views/includes/head.php' ?>
 

@@ -1,5 +1,5 @@
-<!doctype html>
-<html lang="fr">
+<!DOCTYPE html>
+<html lang="fr" style="scroll-behavior: smooth">
 	<head>
 
 	    <?php include_once 'includes/head.php'; ?>
@@ -31,7 +31,7 @@
 		      <h1 style="text-shadow: 1px 1px 2px black" class="display-4 font-italic">Plongez dans une épopée glaçante...</h1>
 		      <p style="text-shadow: 1px 1px 2px black" class="lead my-3">Bien des Secrets qui ne devraient être réveillés sommeillent parfois profondemment dans la glace...</p>
 		      <p style="text-shadow: 1px 1px 2px black" class="lead mb-0">
-		      	<a href="showonepostandcomments&id=12" class="text-white font-weight-bold">Commencer : Chapitre Un</a>
+		      	<a href="showonepostandcomments?id=12" class="text-white font-weight-bold">Commencer : Chapitre Un</a>
 		      </p>
 		    </div>
 		  </div>
@@ -86,7 +86,7 @@
 		        <p class="mb-0">Jean Forteroche est l'auteur du très controversé "Du Rififi Chez Les Fifous". On ne sort jamais vraiment indemme de ses romans souvent très noirs, mais toujours humoristiques...</p>
 		      </div>
 
-		      <?= showAllLastPosts(); ?>
+		      <?= showAllLastPosts() ?>
 
 		    </aside><!-- /.blog-sidebar -->
 

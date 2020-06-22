@@ -42,16 +42,19 @@
 				$_POST['title'] = $allpost['title'];
 				$_POST['post'] = $allpost['post'];
 				$_POST['hour'] = $allpost['hour'];
-				$_POST['author'] = "Jean Forteroche";
+				$_POST['author'] = "Jean Forteroche"; ?>
 
-				echo '<div class="blog-post">
-						<a href=showonepostandcomments?id=' . $_POST['id'] . '>
-				        	<h2 class="blog-post-title">' . $_POST['title'] . '</h2>
-				        	<p class="blog-post-meta">publié le ' . $_POST['hour'] . " " . 'par' . " " . $_POST['author'] . 
-				        	'</p>' . '<p class="colorPost">' . $_POST['post'] . '</p>
-			        	</a>
-			        </div>';
-
+				<div class="blog-post">
+					<a href="showonepostandcomments?id=<?= $_POST['id'] ?> ">
+				        <div class="blog-post-title"><?= $_POST['title'] ?></div>
+				        <p class="blog-post-meta">publié le <?= $_POST['hour'] ?> par <?= $_POST['author'] ?> 
+				        </p>
+				        <p class="colorPost"> <?= $_POST['post'] ?>
+			        </a>
+			    </div>
+			
+			<?php
+			
 			} else {
 
 				echo "";
@@ -63,11 +66,13 @@
 
 		$showPost = new ShowPost;
 
-		$i = 0;
+		$i = 0; ?>
 	
-			echo '<div class="p-4 center">
+			<div class="p-4 center">
 			        <h4 class="font-italic" style="margin-bottom: 20px">Tous les posts</h4>
-				    <ol class="list-unstyled mb-0">';
+				    <ol class="list-unstyled mb-0">
+
+				    <?php
 						
 					foreach($showPost->getAllPosts() as $allpost) {
 
@@ -76,9 +81,13 @@
 						if($i >= 4) { 
 
 							$_POST['id'] = $allpost['id'];
-							$_POST['title'] = $allpost['title'];
+							$_POST['title'] = $allpost['title']; ?>
 
-				          	echo '<li><a href=showonepostandcomments?id=' . $_POST['id'] . '>' . $_POST['title'] . '</a></li>';
+				          	<li>
+				          		<a href="showonepostandcomments?id=<?= $_POST['id']?>"> <?= $_POST['title'] ?> </a>
+				          	</li>
+
+				        <?php
 
 				      	} else {
 
@@ -86,8 +95,11 @@
 				        }
 					}
 
-				    '</ol>
-		      	</div>';
-	}
+					?>
 
+				    </ol>
+		      	</div>
+
+	<?php	      	
+	}
 ?>

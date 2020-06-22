@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" style="scroll-behavior: smooth">
 	<head>
 
-		<?php include_once 'views/includes/head.php'; ?>
+		<?php include_once 'views/includes/head.php' ?>
 
 	</head>
 	<body>
@@ -21,7 +21,7 @@
 
 		<?= showAllReportedComment() ?>
 
-		<?php include_once 'views/includes/footer.php'; ?>
+		<?php include_once 'views/includes/footer.php' ?>
 
 	</body>
 </html>

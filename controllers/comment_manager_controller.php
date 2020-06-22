@@ -26,10 +26,10 @@
 		exit();
 	}
 
-	$buttonNoDelete = '<input type="submit" class="btn btn-link" id="buttonNoDelete" 														name="noDeleteComment" value="Ne pas supprimer du fil"
+	$buttonNoDelete = '<input type="submit" class="btn btn-link buttonNoDelete" 														name="noDeleteComment" value="Ne pas supprimer du fil"
 						/>';
 
-	$buttonReportOrDelete = '<button type="submit" class="btn btn-link" id="buttonReportOrDelete" 											name="deleteComment">
+	$buttonReportOrDelete = '<button type="submit" class="btn btn-link buttonReportOrDelete" 											name="deleteComment">
 								Supprimer
 							</button>';
 
@@ -52,30 +52,32 @@
 			$id_comment = $allReportedComments['id'];
 			$comment = $allReportedComments['comment'];
 			$author = $allReportedComments['author'];
-			$date = $allReportedComments['datecomment'];
+			$date = $allReportedComments['datecomment']; ?>
 
-			echo '<ol class="list-unstyled mb-0">
+			<ol class="list-unstyled mb-0">
 
-					<li class="comment">' . 
-						'<p>
-							<span class="authorComment">' . 
-								$author . 
-							'</span>' . 
-							" a posté le " . $date . 
-						'</p>		
-						<p>' . 
-							'"' . $comment . '"' . 
-						'</p>
-						<form method="post">' . 
-							$buttonNoDelete . 
-							$buttonReportOrDelete . 
-							'<textarea name="id_reported_comment" style="display: none">' .
-								$id_comment .
-							'</textarea>
+				<li class="comment">
+					<p>
+						<span class="authorComment">
+							<?= $author ?>
+						</span> 
+						a posté le <?= $date ?> 
+					</p>		
+					<p>
+						<?= $comment ?>
+					</p>
+						<form method="post">
+							<?= $buttonNoDelete ?>
+							<?= $buttonReportOrDelete ?>
+							<textarea name="id_reported_comment" style="display: none">
+								<?= $id_comment ?>
+							</textarea>
 						</form>
-					</li>
+				</li>
 
-				</ol>';
+			</ol>
+
+		<?php
 
 		}
 	}

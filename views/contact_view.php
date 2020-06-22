@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" style="scroll-behavior: smooth">
 
 	<?php include_once 'views/includes/head.php'; ?>
 
@@ -20,7 +20,7 @@
 				<table>
 					<tr><td>Pseudo</td><td><input name="pseudo" type="text" /></td></tr>
 					<tr><td>Message</td><td>
-						<textarea class="form-control" name="message" type="text" placeholder="Votre message...">
+						<textarea class="form-control" name="message" placeholder="Votre message...">
 						</textarea>
 					</td></tr>
 				</table>

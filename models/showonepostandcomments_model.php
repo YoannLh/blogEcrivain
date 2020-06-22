@@ -72,9 +72,17 @@
 
 			$db = $this->dbConnect();
 
-			$reqPosts = $db->prepare('DELETE FROM posts WHERE id = ?');
-			$reqPosts->execute(array($id_post));
+			$reqDeletePost = $db->prepare('DELETE FROM posts WHERE id = ?');
+			$reqDeletePost->execute(array($id_post));
 	
+		}
+
+		public function deleteCommentByIdPost($id_post) {
+
+			$db = $this->dbConnect();
+
+			$reqDeleteComment = $db->prepare('DELETE FROM comments WHERE id_post = ?');
+			$reqDeleteComment->execute(array($id_post));
 		}
 	}
 
