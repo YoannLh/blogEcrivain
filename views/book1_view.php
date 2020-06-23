@@ -5,7 +5,7 @@
 		<?php include_once 'views/includes/head.php'; ?>
 
 	</head>
-	<body id="body" class="flex">
+	<body id="body" class="container">
 
 		<?php 
 

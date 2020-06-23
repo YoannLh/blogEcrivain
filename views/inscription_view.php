@@ -9,7 +9,7 @@
 			<form class="formInscriptionEtIdentification" method="post">
 				<h3>S'inscrire</h3>
 				<table>
-					<tr><td>Adresse mail</td><td><input type="mail" name="mail"></td></tr>
+					<tr><td>Adresse mail</td><td><input type="email" name="mail"></td></tr>
 					<tr><td>Pseudo</td><td><input name="pseudo" type="text"></td></tr>
 					<tr><td>Mot de passe</td><td><input name="password" type="text"></td></tr>
 					<tr><td>Vérification du mot de passe</td><td><input name="password_two" type="text"></td></tr>
