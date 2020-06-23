@@ -13,6 +13,13 @@
 		exit();
 	}
 
+	// if((isset($_POST['mail']) || isset($_POST['passwordIdentification'])) && 
+	// 	(empty($_POST['mail']) || empty($_POST['passwordIdentification']))) {
+
+	// 	echo "Authentification impossible :/";
+
+	// }	
+
 	if(!empty($_POST['mail']) && !empty($_POST['passwordIdentification'])) {
 
 		$mail = str_secur($_POST['mail']);
@@ -40,16 +47,29 @@
 						$_SESSION['pseudo'] = ucfirst($compare_password['pseudo']);
 						$_SESSION['rank'] = $compare_password['rank'];
 
+						$_POST['mail'] = "";
+						$_POST['passwordIdentification'] = "";
+
 						header('location: home');
 						exit();
 
 					} else {
 
+						$mail = "";
 						echo "Authentification impossible :/";
+						header('location: identification');
 			
 					}
 				}
+
+			} else {
+
+				$mail = "";
+				$_POST['passwordIdentification'] = "";
+				echo "Authentification impossible :/";
+				header('location: identification');
+
 			}
 		}	
-	}
+	} 
 ?>
