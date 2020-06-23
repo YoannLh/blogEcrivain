@@ -108,7 +108,7 @@ h1, h2, h3, h4, h5, h6 {
  */
 .blog-post {
   margin-bottom: 4rem;
-  max-height: 287px;
+  max-height: 300px;
   border-radius: 3px;
   padding: 10px;
   overflow: hidden;

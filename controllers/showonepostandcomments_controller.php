@@ -160,7 +160,7 @@
 
 			$comments->postNewComment($id, str_secur($_POST['comment']), $_SESSION['pseudo']);
 
-			header('location: showonepostandcomments&id=11');
+			header('location: #');
   	
 		} else if (!empty($_POST['comment']) && isset($_POST['comment']) && !isset($_SESSION['pseudo'])) {
 
