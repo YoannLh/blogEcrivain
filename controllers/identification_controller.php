@@ -11,14 +11,19 @@
 
 		header('location: reset_password');
 		exit();
+	} 
+
+	if(isset($_POST['mail']) && empty($_POST['mail'])) {
+
+		echo "Veuillez renseigner un mail !";
+
 	}
 
-	// if((isset($_POST['mail']) || isset($_POST['passwordIdentification'])) && 
-	// 	(empty($_POST['mail']) || empty($_POST['passwordIdentification']))) {
+	if(isset($_POST['passwordIdentification']) && empty($_POST['passwordIdentification'])) {
 
-	// 	echo "Authentification impossible :/";
+		echo "Veuillez renseigner un mot de passe !";
 
-	// }	
+	}
 
 	if(!empty($_POST['mail']) && !empty($_POST['passwordIdentification'])) {
 
@@ -33,7 +38,13 @@
 
 		$identification = new Identification;
 
-		$identification->checkIfMailAlreadyExists($mail);
+		$checkIfMailExists = $identification->checkIfMailAlreadyExists($mail);
+
+		if($checkIfMailExists['askingEmailExists'] != $mail) {
+
+			echo "Ce compte n'existe pas !";
+
+		}
 
 		while($user_identification = $identification->checkIfMailAlreadyExists($mail)) {
 
@@ -61,14 +72,6 @@
 			
 					}
 				}
-
-			} else {
-
-				$mail = "";
-				$_POST['passwordIdentification'] = "";
-				echo "Authentification impossible :/";
-				header('location: identification');
-
 			}
 		}	
 	} 

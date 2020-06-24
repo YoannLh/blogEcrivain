@@ -57,7 +57,7 @@
 
 		}
 
-		public function editPost($id_post) {
+		public function getContentForEditingPost($id_post) {
 
 			$db = $this->dbConnect();
 

@@ -54,6 +54,12 @@
 
 		}
 
+	if (isset($_POST['comment'])) {
+
+		header('location: #');
+
+	}
+
 	if(isset($_GET['id']) && !empty($_GET['id'])) {
 
 		$id = str_secur($_GET['id']);
@@ -160,9 +166,13 @@
 
 			$comments->postNewComment($id, str_secur($_POST['comment']), $_SESSION['pseudo']);
 
+			unset($_POST['comment']);
+
 			header('location: #');
   	
-		} else if (!empty($_POST['comment']) && isset($_POST['comment']) && !isset($_SESSION['pseudo'])) {
+		} 
+
+		if (!empty($_POST['comment']) && isset($_POST['comment']) && !isset($_SESSION['pseudo'])) {
 
 			echo '<div style="text-align: center; color: red">Vous devez être connecté(e) pour poster ou signaler un commentaire !</div>';
 		}
@@ -236,7 +246,7 @@
 
 			$managerPosts = new ShowOnePostAndComments;
 
-			$managerPosts->editPost($id);
+			$managerPosts->getContentForEditingPost($id);
 
 		}
 	}
