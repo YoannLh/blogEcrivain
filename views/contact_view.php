@@ -18,8 +18,8 @@
 				<h3>Contact</h3>
 				<p>Vous pouvez contacter directement l'auteur ici :</p>
 				<table>
-					<tr><td>Pseudo</td><td><input name="pseudo" type="text" /></td></tr>
-					<tr><td>Message</td><td>
+					<tr><td>Pseudo</td><td><input class="form-control" name="pseudo" type="text" /></td></tr>
+					<tr><td>Message</td><td> 
 						<textarea class="form-control" name="message" placeholder="Votre message...">
 						</textarea>
 					</td></tr>
