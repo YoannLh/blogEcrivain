@@ -16,7 +16,7 @@
 <meta property="og:description"       content="<?= WEBSITE_FACEBOOK_DESCRIPTION?>" />
 <meta property="og:image"             content="<?= WEBSITE_FACEBOOK_IMAGE?>" />
  
-<title>Jean Forteroche</title>
+<title>AC Tips</title>
 
 <!-- Bootstrap core CSS -->
 

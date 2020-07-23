@@ -4,7 +4,7 @@
       <div class="col-4 pt-1">
     </div>
     <div class="col-4 text-center">
-      <h1 class="blog-header-logo cold-blue"><a href="home">Billet Simple Pour l'Alaska</a></h1> 
+      <a href="home"><img src="assets/images/logoAC.png" alt="logo"></a>
     </div>
     <div class="col-4 d-flex justify-content-end align-items-center">
 
